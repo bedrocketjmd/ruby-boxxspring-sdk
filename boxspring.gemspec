@@ -18,9 +18,10 @@ Gem::Specification.new do | gem |
   gem.require_paths  = [ 'lib' ]
   gem.files          = Dir.glob( "{lib}/**/*" )
 
-  gem.add_runtime_dependency( "multi_json", '~> 0' )
-  gem.add_runtime_dependency( "active_hash", '~> 0' )
+  gem.add_runtime_dependency( "addressable"  )
+  gem.add_runtime_dependency( "multi_json", "~> 1" )
+  gem.add_runtime_dependency( "active_hash" )
 
-  gem.add_development_dependency( "pry", '~> 0' )
+  gem.add_development_dependency( "pry" )
 
 end
