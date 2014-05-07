@@ -78,7 +78,7 @@ module Boxspring
       end
     end
 
-    def shows( reload = false )
+    def shows
       @_shows ||= begin
         self.attributes.include?( :shows ) ? 
           self.attributes[ :shows ].map do | show |
@@ -92,6 +92,30 @@ module Boxspring
       response = @api_interface.get( "/attributions/#{id}" )
       if ( response.success? )
         Attribution.new( response.content )
+      elsif ( response.code == '404' )
+        nil
+      else
+        raise response.error
+      end
+    end
+
+    def videos( parameters )
+      response = @api_interface.get( "/videos", parameters )
+      if ( response.success? )
+        response.content.map do | video |
+          Video.new( video )
+        end
+      elsif ( response.code == '404' )
+        nil
+      else
+        raise response.error
+      end      
+    end
+
+    def video_by_id( id )
+      response = @api_interface.get( "/videos/#{id}" )
+      if ( response.success? )
+        Video.new( response.content )
       elsif ( response.code == '404' )
         nil
       else

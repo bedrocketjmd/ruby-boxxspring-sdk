@@ -10,12 +10,11 @@ module Boxspring
 
       @code = http_response.code
       @content = decode_response_body( http_response )
+      error = @content.respond_to?( :keys ) ? @content[ 'errors' ] : nil
 
-      unless @content.nil? || ( error = @content[ 'errors' ] ).nil?
-
+      if @content.respond_to?( :include? ) && @content.include?( :errors )
         @error = 
-          Boxspring::Error.new( error[ 'message' ] ) 
-      
+          Boxspring::Error.new( @content[ 'errors' ][ 'message' ] ) 
       end
       
       @success = 
