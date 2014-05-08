@@ -11,6 +11,7 @@ module Boxspring
     field  :name
     field  :url
     field :stories_count
+    field :pictures
 
     field  :slug
 
