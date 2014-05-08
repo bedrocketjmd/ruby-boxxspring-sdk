@@ -56,6 +56,10 @@ module Boxspring
       end
     end
 
+    def service_by_provider( provider )
+      self.services.detect { |service| service.provider == provider }
+    end
+
     def tag_collections( reload = false )
       @_tag_collections ||= begin
         self.attributes.include?( :tag_collections ) ?
@@ -98,8 +102,8 @@ module Boxspring
       end
     end
 
-    def attribution_by_id( id )
-      response = @api_interface.get( "/attributions/#{id}" )
+    def attribution_by_id( id, parameters = {} )
+      response = @api_interface.get( "/attributions/#{id}", parameters )
       if ( response.success? )
         Attribution.new( response.content )
       elsif ( response.code == '404' )

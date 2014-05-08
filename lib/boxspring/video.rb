@@ -1,22 +1,22 @@
 module Boxspring
-	
+
   class Video < Base
 
     include Taggable
 
-    field  :created_at 
-    field  :updated_at 
+    field  :created_at
+    field  :updated_at
     field  :uploaded_at
     field  :published_at
     field  :featured_at
 
     field  :status
-    field  :original 
+    field  :original
     field  :publishing_sequence
 
     field  :type_name
-    field  :id 
-    field  :name 
+    field  :id
+    field  :name
     field  :tagline
     field  :short_description
     field  :description
@@ -36,7 +36,7 @@ module Boxspring
     field  :provider_title
     field  :provider_description
     field  :provider_url
- 
+
     field  :duration
     field  :action_participations_count
     field  :react_actions_counts
@@ -44,7 +44,7 @@ module Boxspring
 
     def show
       @_show ||= begin
-        self.attributes.include?( :show ) ? 
+        self.attributes.include?( :show ) ?
           Show.new( show ) :
           nil
       end
