@@ -2,14 +2,16 @@ module Boxspring
 
 	class Tag < Base
 
-    field  :created_at 
-    field  :updated_at 
+    field  :created_at
+    field  :updated_at
 
-    field  :id 
-    field  :code_name 
+    field  :id
+    field  :code_name
     field  :canonical_name
-    field  :name 
+    field  :name
     field  :slug
+
+    field :stories_count
 
     field  :picture_id
 
@@ -18,7 +20,7 @@ module Boxspring
     end
 
     def private
-      @_private || false 
+      @_private || false
     end
 
 	end

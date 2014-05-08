@@ -1,19 +1,18 @@
 module Boxspring
 
-  class Attribution < Base
-
-    include Taggable
+  class Reaction < Base
 
     field  :created_at
     field  :updated_at
+    field  :reaction_order
 
     field  :id
     field  :name
-    field  :url
-    field :stories_count
+    field  :code_name
+    field  :stories_count
 
     field  :slug
 
-	end
+  end
 
 end

@@ -103,6 +103,17 @@ module Boxspring
       end
     end
 
+    def reaction_by_id( id )
+      response = @api_interface.get( "/reactions/#{id}" )
+      if ( response.success? )
+        Reaction.new( response.content )
+      elsif ( response.code == '404' )
+        nil
+      else
+        raise response.error
+      end
+    end
+
     def videos( parameters = {} )
       response = @api_interface.get( "/videos", parameters )
       if ( response.success? )
