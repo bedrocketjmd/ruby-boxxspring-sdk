@@ -47,7 +47,13 @@ module Boxspring
     end
 
     def services
-       self.attributes[ :services ]
+      @_services ||= begin
+        self.attributes.include?( :services ) ?
+          self.attributes[ :services ].map do | service |
+            Service.new( service )
+          end :
+          nil
+      end
     end
 
     def tag_collections( reload = false )
