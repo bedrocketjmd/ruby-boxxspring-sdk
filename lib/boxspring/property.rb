@@ -3,7 +3,7 @@ module Boxspring
 	class Property < Base
 
 	  def self.find_by( parameters )
-      
+
       # filter only acceptable parameters
       parameters = parameters.stringify_keys.slice(
         'code_name', 'domain_name'
@@ -24,33 +24,37 @@ module Boxspring
 	  	Property.new( response.content ).tap do | property |
 	  	  property.instance_variable_set( '@api_interface', request )
 	  	end
-      
+
 	  end
 
-	  field  :created_at 
-	  field  :updated_at 
-	  field  :destroyed_at 
+	  field  :created_at
+	  field  :updated_at
+	  field  :destroyed_at
 
-	  field  :name 
+	  field  :name
 	  field  :code_name
 	  field  :domain_name
 
 	  field  :meta_description
-	  field  :meta_title 
+	  field  :meta_title
 
     def theme
       @_theme ||= begin
-        self.attributes.include?( :theme ) ? 
+        self.attributes.include?( :theme ) ?
           Theme.new( self.attributes[ :theme ] ) :
           nil
       end
     end
 
+    def services
+       self.attributes[ :services ]
+    end
+
     def tag_collections( reload = false )
       @_tag_collections ||= begin
-        self.attributes.include?( :tag_collections ) ? 
+        self.attributes.include?( :tag_collections ) ?
           self.attributes[ :tag_collections ].map do | tag_collection |
-            TagCollection.new( tag_collection ) 
+            TagCollection.new( tag_collection )
           end :
           nil
       end
@@ -80,9 +84,9 @@ module Boxspring
 
     def shows
       @_shows ||= begin
-        self.attributes.include?( :shows ) ? 
+        self.attributes.include?( :shows ) ?
           self.attributes[ :shows ].map do | show |
-            Show.new( show ) 
+            Show.new( show )
           end :
           nil
       end
@@ -109,7 +113,7 @@ module Boxspring
         nil
       else
         raise response.error
-      end      
+      end
     end
 
     def shows_videos( parameters = {} )
@@ -122,7 +126,7 @@ module Boxspring
         nil
       else
         raise response.error
-      end      
+      end
     end
 
     def video_by_id( id )
