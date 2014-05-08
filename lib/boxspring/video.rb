@@ -2,6 +2,8 @@ module Boxspring
 	
   class Video < Base
 
+    include Taggable
+
     field  :created_at 
     field  :updated_at 
     field  :uploaded_at
@@ -39,6 +41,14 @@ module Boxspring
     field  :action_participations_count
     field  :react_actions_counts
     field  :views_count
+
+    def show
+      @_show ||= begin
+        self.attributes.include?( :show ) ? 
+          Show.new( show ) :
+          nil
+      end
+    end
 
 	end
 

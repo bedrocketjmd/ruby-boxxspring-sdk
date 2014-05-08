@@ -2,6 +2,8 @@ module Boxspring
 	
   class Attribution < Base
 
+    include Taggable
+
     field  :created_at 
     field  :updated_at 
 

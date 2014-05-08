@@ -99,8 +99,21 @@ module Boxspring
       end
     end
 
-    def videos( parameters )
+    def videos( parameters = {} )
       response = @api_interface.get( "/videos", parameters )
+      if ( response.success? )
+        response.content.map do | video |
+          Video.new( video )
+        end
+      elsif ( response.code == '404' )
+        nil
+      else
+        raise response.error
+      end      
+    end
+
+    def shows_videos( parameters = {} )
+      response = @api_interface.get( "/shows/videos", parameters )
       if ( response.success? )
         response.content.map do | video |
           Video.new( video )

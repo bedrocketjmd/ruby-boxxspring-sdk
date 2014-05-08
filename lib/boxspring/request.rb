@@ -1,4 +1,5 @@
 require 'net/https'
+require 'addressable/uri'
 
 module Boxspring
 
@@ -31,9 +32,7 @@ module Boxspring
           Response.new( @http.get( compose_request_path( path, parameters ) ) )
         
       rescue Timeout::Error
-       
         response = nil
-        
       end
         
       response
@@ -53,13 +52,15 @@ module Boxspring
         end
         
         response = 
-          Response.new( @http.post( compose_request_path( path ),  
-                                    data.join( '&' ) ) )
+          Response.new( 
+            @http.post( 
+              compose_request_path( path ),  
+              data.join( '&' ) 
+            ) 
+          )
         
       rescue Timeout::Error
-       
         response = nil
-        
       end
         
       response
@@ -67,29 +68,15 @@ module Boxspring
     end
 
     protected; def compose_request_path( path, parameters = {} )
-    
-      # the query
-      query = ""
 
-      # url encode the parameters
-      ( @default_parameters.merge( parameters.stringify_keys ) ).each do | key, value |
-        query << "#{key}=#{value}&"
-      end
-    
-      # chop the trailing '&'
-      query.chop!
-    
-      # does path include parameters?
-      unless path.include?( '?' )
-        # if not, append the query to the url
-        path = path + '?' + query
-      else
-        # if so, append the query to the existing query 
-        path = path + '&' + query
-      end        
+      addressable = Addressable::URI.new
       
-      path
-    
+      addressable.path = path 
+      addressable.query = 
+        @default_parameters.merge( parameters.stringify_keys ).to_param
+
+      addressable.to_s
+
     end
 
   end

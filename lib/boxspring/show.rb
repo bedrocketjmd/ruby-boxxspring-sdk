@@ -2,6 +2,8 @@ module Boxspring
 	
   class Show < Base
 
+    include Taggable
+
     field  :created_at 
     field  :updated_at 
     field  :published_at
