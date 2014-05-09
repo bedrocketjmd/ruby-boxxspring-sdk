@@ -12,8 +12,12 @@ module Boxspring
       end
     end
 
-    def picture_by_code_name(code_name)
-      self.pictures.detect{ |picture| picture.code_name == code_name }
+    def picture_by_code_name( code_name )
+      picture = self.pictures.detect do | picture | 
+        picture.code_name == code_name 
+      end
+      yield picture if picture.present? && block_given?
+      pictures
     end
 
   end
