@@ -97,8 +97,8 @@ module Boxspring
     def shows
       @_shows ||= begin
         self.attributes.include?( :shows ) ?
-          self.attributes[ :shows ].map do | show |
-            Show.new( show )
+          self.attributes[ :shows ].map do | _show |
+            Show.new( _show )
           end :
           nil
       end

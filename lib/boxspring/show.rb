@@ -24,6 +24,7 @@ module Boxspring
     field  :meta_title
 
     field  :slug
+    field  :status
 
     def private=( _private )
       @_private = ( ( _private == true ) || ( _private =~ /true/i ) ) || false

@@ -45,7 +45,7 @@ module Boxspring
     def show
       @_show ||= begin
         self.attributes.include?( :show ) ?
-          Show.new( show ) :
+          Show.new( self.attributes[ :show ] ) :
           nil
       end
     end
