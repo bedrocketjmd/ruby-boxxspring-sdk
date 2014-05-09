@@ -2,6 +2,8 @@ module Boxspring
 
 	class Property < Base
 
+    include Pictureable
+
 	  def self.find_by( parameters )
 
       # filter only acceptable parameters
