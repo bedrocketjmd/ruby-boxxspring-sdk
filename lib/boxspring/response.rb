@@ -12,14 +12,14 @@ module Boxspring
       @content = decode_response_body( http_response )
       error = @content.respond_to?( :keys ) ? @content[ 'errors' ] : nil
 
-      if @content.respond_to?( :include? ) && @content.include?( :errors )
+      if @content.respond_to?( :include? ) && @content.include?( 'errors' )
         @error = 
           Boxspring::Error.new( @content[ 'errors' ][ 'message' ] ) 
       end
       
       @success = 
         http_response.is_a?( Net::HTTPOK ) && 
-        @content &&
+        @content.present? &&
         @error.nil?
         
       @error = Boxspring::Error.new( 'unknown' ) \
