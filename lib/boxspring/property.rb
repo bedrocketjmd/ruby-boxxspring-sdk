@@ -17,15 +17,21 @@ module Boxspring
       parameters[ 'property_domain_name' ] = parameters.delete( 'domain_name' ) \
         if parameters.include?( 'domain_name' )
 
-      # create and make the request; raise an error if one occurs
+      # create and make the request
 	  	request = Request.new( parameters )
 	  	response = request.get( '/configuration' )
-	  	raise response.error if response.failure?
 
-      # construct a property; retain the request an apu interface
-	  	Property.new( response.content ).tap do | property |
-	  	  property.instance_variable_set( '@api_interface', request )
-	  	end
+      # did the api request succeed 
+      if ( response.success? )
+        # construct a property; assign it the api interface
+        Property.new( response.content ).tap do | property |
+          property.instance_variable_set( '@api_interface', request )
+        end
+      elsif ( response.code == '404' )
+        nil
+      else
+        raise response.error
+      end
 
 	  end
 
