@@ -46,7 +46,7 @@ module Boxspring
 	  field  :meta_description
 	  field  :meta_title
 
-    field  :authentication_enabled
+    field  :authentication_enabled,         default: false
     field  :authentication_username
     field  :authentication_password
 
