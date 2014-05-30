@@ -46,6 +46,10 @@ module Boxspring
 	  field  :meta_description
 	  field  :meta_title
 
+    field  :authentication_enabled
+    field  :authentication_username
+    field  :authentication_password
+
     def theme
       @_theme ||= begin
         self.attributes.include?( :theme ) ?
@@ -132,11 +136,11 @@ module Boxspring
       end
     end
 
-    def videos( parameters = {} )
-      response = @api_interface.get( "/videos", parameters )
+    def stories( parameters = {} )
+      response = @api_interface.get( "/stories", parameters )
       if ( response.success? )
-        response.content.map do | video |
-          Video.new( video )
+        response.content.map do | story |
+          Story.new( story )
         end
       elsif ( response.code == '404' )
         nil
@@ -145,11 +149,11 @@ module Boxspring
       end
     end
 
-    def shows_videos( parameters = {} )
-      response = @api_interface.get( "/shows/videos", parameters )
+    def shows_stories( parameters = {} )
+      response = @api_interface.get( "/shows/stories", parameters )
       if ( response.success? )
-        response.content.map do | video |
-          Video.new( video )
+        response.content.map do | story |
+          Story.new( story )
         end
       elsif ( response.code == '404' )
         nil
@@ -158,10 +162,10 @@ module Boxspring
       end
     end
 
-    def video_by_id( id )
-      response = @api_interface.get( "/videos/#{id}" )
+    def story_by_id( id )
+      response = @api_interface.get( "/stories/#{id}" )
       if ( response.success? )
-        Video.new( response.content )
+        Story.new( response.content )
       elsif ( response.code == '404' )
         nil
       else

@@ -1,12 +1,12 @@
 module Boxspring
 
-  class Video < Base
+  class Story < Base
 
     include Taggable
 
     field  :created_at
     field  :updated_at
-    field  :uploaded_at
+    field  :edited_at
     field  :published_at
     field  :featured_at
 
@@ -21,6 +21,9 @@ module Boxspring
     field  :short_description
     field  :description
 
+    field  :content_type
+    field  :content_id
+
     field  :picture_id
 
     field  :meta_description
@@ -31,16 +34,18 @@ module Boxspring
     field  :show_episode
     field  :show_season
 
-    field  :provider
-    field  :provider_uid
-    field  :provider_title
-    field  :provider_description
-    field  :provider_url
-
-    field  :duration
     field  :action_participations_count
     field  :react_actions_counts
-    field  :views_count
+
+    def content
+      @_content ||= begin
+        content_class = Boxspring.const_get( self.content_type ) \
+          rescue nil
+        content_class ? 
+          content_class.new( self.attributes[ :content ] ) :
+          nil    
+      end
+    end
 
     def show
       @_show ||= begin
