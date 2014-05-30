@@ -21,7 +21,7 @@ module Boxspring
 	  	request = Request.new( parameters )
 	  	response = request.get( '/configuration' )
 
-      # did the api request succeed 
+      # did the api request succeed
       if ( response.success? )
         # construct a property; assign it the api interface
         Property.new( response.content ).tap do | property |
@@ -70,6 +70,20 @@ module Boxspring
 
     def service_by_provider( provider )
       self.services.detect { |service| service.provider == provider }
+    end
+
+    def pages( parameters = {} )
+      @pages ||= begin
+        self.attributes.include?( :pages ) ?
+          self.attributes[ :pages ].map do | page |
+            Page.new( page )
+          end :
+          nil
+      end
+    end
+
+    def page_by_code_name( code_name )
+      self.pages.detect { |page| page.code_name == code_name }
     end
 
     def tag_collections( reload = false )
