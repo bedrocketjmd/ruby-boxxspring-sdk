@@ -86,6 +86,17 @@ module Boxspring
       self.pages.detect { |page| page.code_name == code_name }
     end
 
+    def page_by_id( id )
+      response = @api_interface.get( "/pages/#{id}" )
+      if ( response.success? )
+        Page.new( response.content )
+      elsif ( response.code == '404' )
+        nil
+      else
+        raise response.error
+      end
+    end
+
     def tag_collections( reload = false )
       @_tag_collections ||= begin
         self.attributes.include?( :tag_collections ) ?
