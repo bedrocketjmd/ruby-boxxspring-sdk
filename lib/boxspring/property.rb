@@ -187,8 +187,8 @@ module Boxspring
       end
     end
 
-    def story_by_id( id )
-      response = @api_interface.get( "/stories/#{id}" )
+    def story_by_id( id, parameters = {} )
+      response = @api_interface.get( "/stories/#{id}", parameters )
       if ( response.success? )
         Story.new( response.content )
       elsif ( response.code == '404' )
