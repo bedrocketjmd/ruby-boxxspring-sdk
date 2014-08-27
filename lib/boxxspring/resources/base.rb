@@ -24,13 +24,13 @@ module Boxxspring
     def self.has_one( name, options = {} )
       define_method name do 
         associations = self.instance_variable_get( "@_#{name.to_s.pluralize}" )
-        associations.present? ? associations.first : options[ :default]
+        associations.present? ? associations.first : options[ :default ]
       end
     end
 
     def self.has_many( name, options = {} )  
       define_method name do 
-        self.instance_variable_get( "@_#{name}" ) || options[ :default ]
+        self.instance_variable_get( "@_#{name}" ) || options[ :default ] || []
       end
     end
 
