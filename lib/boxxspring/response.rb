@@ -1,4 +1,4 @@
-module Boxspring
+module Boxxspring
 
   class Response
 
@@ -14,7 +14,7 @@ module Boxspring
 
       if @content.respond_to?( :include? ) && @content.include?( 'errors' )
         @error = 
-          Boxspring::Error.new( @content[ 'errors' ][ 'message' ] ) 
+          Boxxspring::Error.new( @content[ 'errors' ][ 'message' ] ) 
       end
       
       @success = 
@@ -22,7 +22,7 @@ module Boxspring
         @content.present? &&
         @error.nil?
         
-      @error = Boxspring::Error.new( 'unknown' ) \
+      @error = Boxxspring::Error.new( 'unknown' ) \
         if !@success && @error.nil?
         
     end

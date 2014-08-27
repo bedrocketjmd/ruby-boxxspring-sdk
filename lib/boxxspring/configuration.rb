@@ -1,6 +1,6 @@
 require 'singleton'
 
-module Boxspring
+module Boxxspring
 
   def self.configuration( &block )
     Configuration.instance().instance_eval( &block ) unless block.nil?
@@ -33,7 +33,7 @@ module Boxspring
     end
 
     # the api uri
-    define_attribute :api_uri,      default: 'http://api.bedrocketplatform.com/'
+    define_attribute :api_uri,      default: 'http://api-staging.bedrocketplatform.com/'
   
     def from_hash( configuration )
   

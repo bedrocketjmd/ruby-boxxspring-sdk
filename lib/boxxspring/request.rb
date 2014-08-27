@@ -1,14 +1,14 @@
 require 'net/https'
 require 'addressable/uri'
 
-module Boxspring
+module Boxxspring
 
   class Request
 
     def initialize( default_parameters = {} )
   
       # parse the API uri
-      uri = URI.parse( Boxspring.configuration.api_uri )
+      uri = URI.parse( Boxxspring.configuration.api_uri )
 
       # construct http request
       @http = Net::HTTP.new( uri.host, uri.port )
@@ -69,11 +69,11 @@ module Boxspring
 
     protected; def compose_request_path( path, parameters = {} )
 
+      parameters = @default_parameters.merge( parameters.stringify_keys )
       addressable = Addressable::URI.new
       
       addressable.path = path 
-      addressable.query = 
-        @default_parameters.merge( parameters.stringify_keys ).to_param
+      addressable.query = parameters.to_param unless parameters.blank?
 
       addressable.to_s
 

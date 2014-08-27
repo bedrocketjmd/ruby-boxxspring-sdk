@@ -1,4 +1,4 @@
-boxspring-ruby-client
+boxxspring-ruby-client
 =====================
 
-The Boxspring ruby client.
+The Boxxspring ruby client.

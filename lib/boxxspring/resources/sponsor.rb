@@ -1,17 +1,14 @@
-module Boxspring
+module Boxxspring
 
-  class Reaction < Base
+  class Sponsor < Base
 
     field  :created_at
     field  :updated_at
-    field  :reaction_order
 
     field  :id
     field  :name
-    field  :code_name
+    field  :picture_id
     field  :stories_count
-
-    field  :slug
 
   end
 

@@ -1,4 +1,4 @@
-module Boxspring
+module Boxxspring
 
   class Card < Base
 
@@ -17,14 +17,6 @@ module Boxspring
     field   :provider_url
 
     field   :properties
-
-    def show
-      @_show ||= begin
-        self.attributes.include?( :show ) ?
-          Show.new( self.attributes[ :show ] ) :
-          nil
-      end
-    end
 
 	end
 

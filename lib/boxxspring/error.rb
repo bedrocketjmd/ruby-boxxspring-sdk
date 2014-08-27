@@ -1,4 +1,4 @@
-module Boxspring
+module Boxxspring
   
   class Error < RuntimeError
   end
