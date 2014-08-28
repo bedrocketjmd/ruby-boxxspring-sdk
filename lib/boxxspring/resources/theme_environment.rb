@@ -2,6 +2,9 @@ module Boxxspring
 
 	class ThemeEnvironment < Base
 
+    field     :type_name
+    field     :id
+
     field     :created_at
     field     :updated_at
 

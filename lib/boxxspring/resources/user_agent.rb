@@ -2,7 +2,9 @@ module Boxxspring
 
 	class UserAgent < Base
 
-    field  :id 
+    field  :type_name
+    field  :id
+
     field  :name 
     field  :pattern
 

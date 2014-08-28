@@ -2,17 +2,17 @@ module Boxxspring
 
   class Artifact < Base
 
+    field  :type_name
+    field  :id
+
     field  :created_at
     field  :updated_at
     field  :edited_at
     field  :published_at
-    field  :featured_at
 
-    field  :status
+    field  :state
     field  :original
 
-    field  :type_name
-    field  :id
     field  :name
     field  :short_description
     field  :description
@@ -23,6 +23,12 @@ module Boxxspring
     field  :meta_description
     field  :meta_title
     field  :slug
+
+    has_one   :attribution 
+
+    has_many  :artifacts
+    has_many  :pictures
+    has_many  :cards    
 
 	end
 
