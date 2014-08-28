@@ -23,6 +23,10 @@ module Boxxspring
       self.spawn( offset: _offset )
     end
 
+    def include( *arguments )
+      self.spawn( :include => self.normalize_include( *arguments ) )
+    end
+
     def query
       result = nil
       Boxxspring::Request.new.tap do | request |
@@ -46,6 +50,31 @@ module Boxxspring
         @path,
         @parameters.deep_merge( parameters || {} )
       )
+    end
+
+    public; def normalize_include( *arguments )
+
+      includes = {};
+      arguments.each do | argument |
+        case argument
+        when Array
+          argument.each do | value  |
+            includes.deep_merge!( self.normalize_include( value ) )
+          end
+        when Hash 
+          argument.each do | key, value |
+            if !includes.include?( key ) || includes[ key ] === true 
+              includes[ key ] = self.normalize_include( value )
+            else
+              includes[ key ].deep_merge!( self.normalize_include( value ) )
+            end
+          end
+        else 
+          includes[ argument ] = true
+        end
+      end
+      includes 
+
     end
 
   end
