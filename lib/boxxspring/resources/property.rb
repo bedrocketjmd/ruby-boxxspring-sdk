@@ -22,7 +22,6 @@ module Boxxspring
 
     has_many  :groups
     has_many  :pages
-    has_many  :reactions
     has_many  :services
     has_many  :pictures
     has_one   :theme
