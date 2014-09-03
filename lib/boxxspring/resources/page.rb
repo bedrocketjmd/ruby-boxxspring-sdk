@@ -1,3 +1,9 @@
 module Boxxspring
-  class Page < Artifact; end
+
+  class Page < Artifact
+
+    field   :code_name
+
+  end
+  
 end

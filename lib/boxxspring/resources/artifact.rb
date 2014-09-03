@@ -23,6 +23,8 @@ module Boxxspring
     field  :meta_description
     field  :meta_title
     field  :slug
+    
+    field  :sponsor_id
 
     has_one   :attribution 
 
