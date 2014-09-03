@@ -65,15 +65,17 @@ module Boxxspring
       result = Hash.new { | hash, key | hash[ key ] = [] }
       associations = self.associations
       if associations && associations.include?( name )
-        associations = associations[ name ].detect do | association |
+        association = associations[ name ].detect do | association |
           association[ 'id' ] == key 
         end
-        associations.each do | key, value |
-          unless key == 'id'
-            result[ key ] = value.map do | associated_id |
-              self.resource_by( key, associated_id )
+        if association.present?
+          association.each do | key, value |
+            unless key == 'id'
+              result[ key ] = value.map do | associated_id |
+                self.resource_by( key, associated_id )
+              end
+              result[ key ].compact!
             end
-            result[ key ].compact!
           end
         end
       end 
