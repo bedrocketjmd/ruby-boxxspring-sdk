@@ -8,6 +8,7 @@ module Boxxspring
     field     :created_at
     field     :updated_at
 
+    field     :order
     field     :code_name
     field     :name
     field     :description
