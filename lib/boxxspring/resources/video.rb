@@ -8,7 +8,10 @@ module Boxxspring
     field  :id
     field  :storage_key
     field  :filename
-    field  :output_sources
+    field  :content_type
+    field  :picture_id
+
+    has_many :video_sources
     
   end
 
