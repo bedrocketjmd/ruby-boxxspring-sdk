@@ -30,7 +30,8 @@ module Boxxspring
 
     has_many  :artifacts
     has_many  :pictures
-    has_many  :cards    
+    has_many  :cards  
+    has_many  :sponsors 
 
 	end
 
