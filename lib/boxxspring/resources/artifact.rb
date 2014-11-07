@@ -25,6 +25,7 @@ module Boxxspring
     field  :slug
     
     field  :sponsor_id
+    field  :template_id
 
     has_one   :attribution 
 
