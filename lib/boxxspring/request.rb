@@ -30,7 +30,7 @@ module Boxxspring
         
         response = 
           Response.new( @http.get( compose_request_path( path, parameters ) ) )
-        
+    
       rescue Timeout::Error
         response = nil
       end

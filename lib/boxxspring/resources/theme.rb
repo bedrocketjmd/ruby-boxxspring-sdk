@@ -10,7 +10,7 @@ module Boxxspring
     field     :default_javascript_uri
     field     :default_stylesheet_uri
 
-    has_many  :theme_environments
+    has_many  :environments
 
 	end
 

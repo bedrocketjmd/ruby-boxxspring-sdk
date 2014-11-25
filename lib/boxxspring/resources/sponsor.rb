@@ -10,6 +10,8 @@ module Boxxspring
     field  :name
     field  :picture_id
 
+    has_many :artifacts
+
   end
 
 end

@@ -25,12 +25,14 @@ module Boxxspring
     field  :slug
     
     field  :sponsor_id
+    field  :template_id
 
     has_one   :attribution 
 
     has_many  :artifacts
     has_many  :pictures
-    has_many  :cards    
+    has_many  :cards  
+    has_many  :sponsors 
 
 	end
 

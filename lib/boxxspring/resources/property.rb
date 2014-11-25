@@ -18,7 +18,7 @@ module Boxxspring
 
     field   :authentication_enabled,         default: false
     field   :authentication_username
-    field   :authentication_password
+    field   :authorization_password
 
     has_many  :groups
     has_many  :pages
