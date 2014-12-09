@@ -5,16 +5,16 @@ module Boxxspring
     field   :type_name
     field   :id
 
-	  field   :created_at
-	  field   :updated_at
-	  field   :destroyed_at
+    field   :created_at
+    field   :updated_at
+    field   :destroyed_at
 
-	  field   :name
-	  field   :code_name
-	  field   :domain_name
+    field   :name
+    field   :code_name
+    field   :domain_name
 
-	  field   :meta_description
-	  field   :meta_title
+    field   :meta_description
+    field   :meta_title
 
     field   :authentication_enabled,         default: false
     field   :authentication_username
