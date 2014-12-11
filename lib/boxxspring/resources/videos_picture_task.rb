@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class VideosPictureTask < Base
+  class VideosPictureTask < Task
 
     field   :timecode
     field   :picture_id
