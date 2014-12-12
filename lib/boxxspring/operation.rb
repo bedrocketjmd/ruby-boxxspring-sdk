@@ -39,18 +39,6 @@ module Boxxspring
       result
     end
 
-    def write
-      result = nil
-      Boxxspring::Request.new.tap do | request |
-        request.post( @path, @parameters ).tap do | response |
-          parser = Boxxspring::Parser.new( response.content )
-          result = parser.resources
-          result = result.first if result.length > 0 && @result == Object 
-        end
-      end
-      result
-    end
-
     def read 
       result = self.query
       result = result.first if result.present? && result.is_a?( Enumerable )
