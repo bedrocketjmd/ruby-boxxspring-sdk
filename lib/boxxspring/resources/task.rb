@@ -12,6 +12,8 @@ module Boxxspring
     field   :started_at
     field   :ended_at
 
+    has_one :property
+
   end
 
 end
