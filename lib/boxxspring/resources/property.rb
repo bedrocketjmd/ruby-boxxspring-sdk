@@ -19,12 +19,16 @@ module Boxxspring
     field   :authentication_username
     field   :authorization_password
 
+    field   :default_advertisement_id
+
     has_many  :groups
     has_many  :pages
     has_many  :services
     has_many  :pictures
     has_one   :theme
     has_one   :default_advertisement
+
+    has_many  :errors
 
     def operation( path )
       Boxxspring::Operation.new( File.join( '/properties', self.id.to_s, path ) )
