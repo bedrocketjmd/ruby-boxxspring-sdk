@@ -4,6 +4,7 @@ module Boxxspring
 
     def initialize( content = {} )
       @content = content
+      yield self if block_given?
     end
 
     def name 
@@ -14,8 +15,12 @@ module Boxxspring
 
     def type_name 
       @content.include?( '$this' ) ?
-        @content[ '$this' ][ 'name' ] :
+        @content[ '$this' ][ 'type_name' ] :
         nil
+    end
+
+    def type_name?( name )
+      self.type_name == name.to_s 
     end
 
     def key
@@ -43,12 +48,22 @@ module Boxxspring
     end
 
     def resource_by( name, key )
+
       @resources_index ||= Hash.new { | hash, key | hash[ key ] = {} }
+      @resource_index_mutex ||= Hash.new( [] )
+      
       @resources_index[ name ][ key ] ||= begin
+
+        # lock the resource index for this name/key combination
+        # note: this prevents boxxspring objects that are associated with  
+        #       themselves from causing a stack overflow
+        return nil if @resource_index_mutex[ name ].include?( key )
+        @resource_index_mutex[ name ].push( key )
+
         result = nil
         resource_attributes = resource_attribute_index[ name ][ key ]
         if resource_attributes.present? 
-          type_name = resource_attributes.delete( 'type_name' ) || self.type_name
+          type_name = resource_attributes[ 'type_name' ] || self.type_name
           klass = Boxxspring.const_get( type_name.classify ) rescue nil
           if klass.present?
             result = klass.new( 
@@ -57,8 +72,14 @@ module Boxxspring
             )
           end
         end
+
+        # unlock the resource index for this name/key combination
+        @resource_index_mutex[ name ].delete( key)
+  
         result 
+
       end
+    
     end
 
     def resource_associations_by( name, key )

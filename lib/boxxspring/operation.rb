@@ -31,8 +31,7 @@ module Boxxspring
       result = nil
       Boxxspring::Request.new.tap do | request |
         request.get( @path, @parameters ).tap do | response |
-          parser = Boxxspring::Parser.new( response.content )
-          result = parser.resources
+          result = response.resources
           result = result.first if result.length > 0 && @result == Object 
         end
       end
@@ -45,12 +44,13 @@ module Boxxspring
       result
     end
 
-    def write
+    def write( node, objects ) 
       result = nil
       Boxxspring::Request.new.tap do | request |
-        request.post( @path, @parameters ).tap do | response |
-          parser = Boxxspring::Parser.new( response.content )
-          result = parser.resources
+        serializer = Boxxspring::Serializer.new( objects )
+        response = request.post( @path, @parameters, serializer.serialize( node ) )
+        if response.present?
+          result = response.resources
           result = result.first if result.length > 0 && @result == Object 
         end
       end
@@ -64,7 +64,7 @@ module Boxxspring
       )
     end
 
-    public; def normalize_include( *arguments )
+    protected; def normalize_include( *arguments )
 
       includes = {};
       arguments.each do | argument |

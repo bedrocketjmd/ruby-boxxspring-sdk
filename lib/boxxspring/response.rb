@@ -2,29 +2,27 @@ module Boxxspring
 
   class Response
 
-    attr_reader :content
-    attr_reader :error
     attr_reader :code
+    attr_reader :resources 
     
     def initialize( http_response )
 
-      @code = http_response.code
-      @content = decode_response_body( http_response )
-      error = @content.respond_to?( :keys ) ? @content[ 'errors' ] : nil
+      @success = http_response.is_a?( Net::HTTPOK )
 
-      if @content.respond_to?( :include? ) && @content.include?( 'errors' )
-        @error = 
-          Boxxspring::Error.new( @content[ 'errors' ][ 'message' ] ) 
+      @code = http_response.code
+      @resources = []
+
+      content = decode_response_body( http_response )
+      if ( content && content.respond_to?( :keys ) )
+        Boxxspring::Parser.new( content ) do | parser |
+          @resources = parser.resources
+          @success = !parser.type_name?( :error )
+        end
+      else
+        @success = false
+        @resources << Boxxspring::Error.new( 'unknown' )
       end
-      
-      @success = 
-        http_response.is_a?( Net::HTTPOK ) && 
-        @content.present? &&
-        @error.nil?
-        
-      @error = Boxxspring::Error.new( 'unknown' ) \
-        if !@success && @error.nil?
-        
+                      
     end
 
     def success?
@@ -39,7 +37,7 @@ module Boxxspring
     
       response = nil
       
-      body = http_response.body; 
+      body = http_response.body;
       unless body.nil? || body.empty?
         response = 
           MultiJson.decode( http_response.body ) rescue nil

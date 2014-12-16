@@ -6,6 +6,7 @@ require 'boxxspring/configuration'
 require 'boxxspring/response'
 require 'boxxspring/request'
 require 'boxxspring/parser'
+require 'boxxspring/serializer'
 require 'boxxspring/operation'
 
 require 'boxxspring/resources/base'

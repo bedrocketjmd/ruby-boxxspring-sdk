@@ -27,10 +27,9 @@ module Boxxspring
       response = nil
       
       begin  
-        
-        response = 
-          Response.new( @http.get( compose_request_path( path, parameters ) ) )
-    
+        response = Response.new( 
+          @http.get( compose_request_path( path, parameters ) ) 
+        )
       rescue Timeout::Error
         response = nil
       end
@@ -39,25 +38,19 @@ module Boxxspring
                       
     end
 
-    def post( path, parameters = {} )
+    def post( path, parameters = {}, body = {} )
   
       response = nil
       
       begin  
-        
-        data = []
-        
-        parameters.each_pair do | key, value |
-          data << "#{key.to_s}=#{value.to_s}"
-        end
-        
-        response = 
-          Response.new( 
-            @http.post( 
-              compose_request_path( path ),  
-              data.join( '&' ) 
-            ) 
-          )
+               
+        request = Net::HTTP::Post.new( 
+          compose_request_path( path, parameters ), 
+          { 'Content-Type' =>'application/json' }
+        )
+        request.body = body.to_json
+
+        response = Response.new( @http.request( request ) )
         
       rescue Timeout::Error
         response = nil
