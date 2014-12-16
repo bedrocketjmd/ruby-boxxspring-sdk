@@ -2,7 +2,6 @@ require 'active_support'
 require 'active_support/all'
 require 'multi_json'
 
-require 'boxxspring/error'
 require 'boxxspring/configuration'
 require 'boxxspring/response'
 require 'boxxspring/request'
@@ -10,6 +9,11 @@ require 'boxxspring/parser'
 require 'boxxspring/operation'
 
 require 'boxxspring/resources/base'
+
+require 'boxxspring/resources/error'
+require 'boxxspring/resources/forbidden_error'
+require 'boxxspring/resources/missing_parameter_error'
+
 require 'boxxspring/resources/picture'
 require 'boxxspring/resources/user_agent'
 require 'boxxspring/resources/theme_environment'

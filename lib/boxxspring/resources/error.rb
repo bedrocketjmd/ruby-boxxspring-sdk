@@ -1,6 +1,7 @@
 module Boxxspring
   
-  class Error < RuntimeError
+  class Error < Base
+    self.fields = { message: {} }
   end
 
 end

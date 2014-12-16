@@ -1,6 +1,6 @@
 module Boxxspring
   
-  class Error < RuntimeError
+  class ForbiddenError < Error
   end
 
 end
