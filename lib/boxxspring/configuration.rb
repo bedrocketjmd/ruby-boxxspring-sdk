@@ -32,8 +32,8 @@ module Boxxspring
       )
     end
 
-    # the api uri
-    define_attribute :api_uri,      default: 'http://api-staging.bedrocketplatform.com/'
+    # the api uri; DO NOT COMMIT A MODIFIED DEFAULT
+    define_attribute :api_uri,      default: 'https://api.boxxspring.com'
   
     def from_hash( configuration )
   
