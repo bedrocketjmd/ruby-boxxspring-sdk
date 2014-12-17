@@ -49,8 +49,10 @@ module Boxxspring
 
     def resource_by( name, key )
 
+      puts "#{name}: #{key}"
+
       @resources_index ||= Hash.new { | hash, key | hash[ key ] = {} }
-      @resource_index_mutex ||= Hash.new( [] )
+      @resource_index_mutex ||= Hash.new { | hash, key | hash[ key ] = [] }
       
       @resources_index[ name ][ key ] ||= begin
 
@@ -74,7 +76,7 @@ module Boxxspring
         end
 
         # unlock the resource index for this name/key combination
-        @resource_index_mutex[ name ].delete( key)
+        @resource_index_mutex[ name ].delete( key )
   
         result 
 
