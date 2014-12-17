@@ -51,7 +51,6 @@ module Boxxspring
         response = request.post( @path, @parameters, serializer.serialize( node ) )
         if response.present?
           result = response.resources
-          result = result.first if result.length > 0 && @result == Object 
         end
       end
       result
