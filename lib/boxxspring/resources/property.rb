@@ -19,8 +19,6 @@ module Boxxspring
     field   :authentication_username
     field   :authorization_password
 
-    field   :default_advertisement_id
-
     has_many  :groups
     has_many  :pages
     has_many  :services
