@@ -20,7 +20,9 @@ module Boxxspring
         end
       else
         @success = false
-        @resources << Boxxspring::Error.new( 'unknown' )
+        @resources << Boxxspring::Error.new( 
+          message: "An unknown error occured (#{@code})."
+        )
       end
                       
     end
