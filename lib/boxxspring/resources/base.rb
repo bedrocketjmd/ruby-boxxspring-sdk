@@ -47,10 +47,11 @@ module Boxxspring
     class_attribute :fields, instance_writer: false
     self.fields = {}
 
+    field :type_name
+
   	def initialize( attributes = {}, associations = {} )
-      attributes.symbolize_keys!
-      @attributes = attributes
-      attributes.dup.each do | key, value |
+      self.type_name = self.class.name.gsub( /Boxxspring::/, '' ).underscore
+      attributes.each do | key, value |
         send( "#{key}=", value ) if respond_to?( "#{key}=" )
       end
       associations.each do | key, value |

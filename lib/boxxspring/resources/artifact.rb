@@ -2,7 +2,6 @@ module Boxxspring
 
   class Artifact < Base
 
-    field     :type_name
     field     :id
 
     field     :created_at
@@ -36,6 +35,8 @@ module Boxxspring
     has_many  :pictures
     has_many  :cards  
     has_many  :sponsors 
+
+    has_many  :errors
 
 	end
 

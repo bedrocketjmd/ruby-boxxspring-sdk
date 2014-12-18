@@ -2,7 +2,6 @@ module Boxxspring
 
 	class Property < Base
 
-    field   :type_name
     field   :id
 
     field   :created_at

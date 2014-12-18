@@ -2,7 +2,6 @@ module Boxxspring
 
 	class Theme < Base
 
-    field     :type_name
     field     :id
     field     :code_name 
     field     :name 
