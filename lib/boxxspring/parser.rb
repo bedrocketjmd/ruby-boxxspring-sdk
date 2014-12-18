@@ -49,8 +49,6 @@ module Boxxspring
 
     def resource_by( name, key )
 
-      puts "#{name}: #{key}"
-
       @resources_index ||= Hash.new { | hash, key | hash[ key ] = {} }
       @resource_index_mutex ||= Hash.new { | hash, key | hash[ key ] = [] }
       

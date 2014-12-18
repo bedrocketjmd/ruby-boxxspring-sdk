@@ -13,6 +13,7 @@ require 'boxxspring/resources/base'
 
 require 'boxxspring/resources/error'
 require 'boxxspring/resources/forbidden_error'
+require 'boxxspring/resources/attribute_error'
 require 'boxxspring/resources/missing_parameter_error'
 
 require 'boxxspring/resources/picture'
