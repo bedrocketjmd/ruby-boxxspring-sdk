@@ -1,7 +1,7 @@
 module Boxxspring
   
   class Error < Base
-    self.fields = { message: {} }
+    field :message
   end
 
 end
