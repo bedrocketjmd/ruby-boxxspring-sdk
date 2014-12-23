@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class VideoSource < Base
+  class VideoSourceSegment < Base
 
     field  :created_at
     field  :updated_at
@@ -11,7 +11,7 @@ module Boxxspring
     field  :width
     field  :height
 
-    has_one :video
+    has_one :video_source
 
   end
 
