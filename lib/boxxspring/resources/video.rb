@@ -9,6 +9,8 @@ module Boxxspring
     field  :storage_key
     field  :filename
     field  :content_type
+    field  :size
+    field  :duration
     field  :picture_id
 
     has_many :video_sources
