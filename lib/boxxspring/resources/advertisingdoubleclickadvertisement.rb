@@ -6,6 +6,5 @@ module Boxxspring
     field  :state
     field  :iu
     field  :sz
-
   end
 end
