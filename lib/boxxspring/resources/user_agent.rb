@@ -7,8 +7,6 @@ module Boxxspring
     field  :name 
     field  :pattern
 
-    has_many  :errors
-
 	end
 
 end

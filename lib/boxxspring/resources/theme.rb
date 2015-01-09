@@ -11,8 +11,6 @@ module Boxxspring
 
     has_many  :environments
 
-    has_many  :errors
-
 	end
 
 end
