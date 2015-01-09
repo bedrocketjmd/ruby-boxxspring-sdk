@@ -13,6 +13,8 @@ module Boxxspring
 
     has_one :property
 
+    has_many  :errors
+
   end
 
 end

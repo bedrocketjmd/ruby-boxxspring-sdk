@@ -14,6 +14,8 @@ module Boxxspring
     field  :picture_id
 
     has_many :video_sources
+
+    has_many  :errors
     
   end
 

@@ -17,6 +17,8 @@ module Boxxspring
 
     field   :properties
 
+    has_many  :errors
+
 	end
 
 end

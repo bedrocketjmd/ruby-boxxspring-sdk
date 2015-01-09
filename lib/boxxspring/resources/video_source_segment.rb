@@ -13,6 +13,8 @@ module Boxxspring
     field  :width
     field  :height
 
+    has_many  :errors
+
   end
 
 end

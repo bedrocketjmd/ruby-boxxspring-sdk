@@ -15,6 +15,8 @@ module Boxxspring
 
     has_many :segments
 
+    has_many  :errors
+
   end
 
 end

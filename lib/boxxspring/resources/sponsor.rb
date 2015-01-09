@@ -11,6 +11,8 @@ module Boxxspring
 
     has_many :artifacts
 
+    has_many  :errors
+
   end
 
 end

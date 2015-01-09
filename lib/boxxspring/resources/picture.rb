@@ -12,6 +12,8 @@ module Boxxspring
     field  :content_type
     field  :size
 
+    has_many  :errors
+
   end
 
 end

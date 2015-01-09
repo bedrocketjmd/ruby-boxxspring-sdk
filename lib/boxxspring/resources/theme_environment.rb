@@ -16,6 +16,8 @@ module Boxxspring
 
     has_one   :user_agent
 
+    has_many  :errors
+
 	end
 
 end

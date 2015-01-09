@@ -9,6 +9,8 @@ module Boxxspring
     field  :provider
     field  :public_settings
 
+    has_many  :errors
+
   end
 
 end
