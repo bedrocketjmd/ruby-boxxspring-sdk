@@ -26,8 +26,6 @@ module Boxxspring
     has_one   :theme
     has_one   :default_advertisement
 
-    has_many  :errors
-
     def operation( path )
       Boxxspring::Operation.new( File.join( '/properties', self.id.to_s, path ) )
     end
