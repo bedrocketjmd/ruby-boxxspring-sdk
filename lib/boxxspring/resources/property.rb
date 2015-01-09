@@ -24,6 +24,9 @@ module Boxxspring
     has_many  :services
     has_many  :pictures
     has_one   :theme
+    has_one   :default_advertisement
+
+    has_many  :errors
 
     def operation( path )
       Boxxspring::Operation.new( File.join( '/properties', self.id.to_s, path ) )
