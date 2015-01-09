@@ -7,6 +7,7 @@ module Boxxspring
     field   :tags
     field   :originated_at
     field   :note
+    field   :provider
     field   :provider_uid
     field   :provider_url
     field   :video_file_url
