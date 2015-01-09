@@ -8,6 +8,7 @@ module Boxxspring
     field     :updated_at
     field     :edited_at
     field     :published_at
+    field     :originated_at
 
     field     :state
     field     :original
@@ -35,9 +36,8 @@ module Boxxspring
     has_many  :pictures
     has_many  :cards  
     has_many  :sponsors 
+    has_many  :advertisements 
 
-    has_many  :errors
-
-	end
+  end
 
 end

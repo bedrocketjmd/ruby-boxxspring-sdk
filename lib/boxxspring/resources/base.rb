@@ -48,6 +48,7 @@ module Boxxspring
     self.fields = {}
 
     field :type_name
+    has_many  :errors
 
   	def initialize( attributes = {}, associations = {} )
       self.type_name = self.class.name.gsub( /Boxxspring::/, '' ).underscore
