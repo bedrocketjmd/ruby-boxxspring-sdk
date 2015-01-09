@@ -8,6 +8,7 @@ module Boxxspring
     field     :updated_at
     field     :edited_at
     field     :published_at
+    field     :originated_at
 
     field     :state
     field     :original
