@@ -6,6 +6,7 @@ module Boxxspring
     field   :updated_at
 
     field   :id
+    field   :property_id
 
     field   :state
     field   :started_at
