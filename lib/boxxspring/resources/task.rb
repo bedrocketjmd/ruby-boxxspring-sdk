@@ -9,6 +9,7 @@ module Boxxspring
     field   :property_id
 
     field   :state
+    field   :message
     field   :started_at
     field   :ended_at
 
