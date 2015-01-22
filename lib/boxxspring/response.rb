@@ -11,7 +11,6 @@ module Boxxspring
       @success = http_response.is_a?( Net::HTTPOK )
 
       @code = http_response.code
-      @body = http_response.body
       @resources = []
 
       content = decode_response_body( http_response )
@@ -26,6 +25,7 @@ module Boxxspring
           message: "An unknown error occured (#{@code})."
         )
       end
+      @body = content
                       
     end
 
