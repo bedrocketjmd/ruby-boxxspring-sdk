@@ -3,6 +3,7 @@ module Boxxspring
   class Response
 
     attr_reader :code
+    attr_reader :body
     attr_reader :resources 
     
     def initialize( http_response )
@@ -10,6 +11,7 @@ module Boxxspring
       @success = http_response.is_a?( Net::HTTPOK )
 
       @code = http_response.code
+      @body = http_response.body
       @resources = []
 
       content = decode_response_body( http_response )
