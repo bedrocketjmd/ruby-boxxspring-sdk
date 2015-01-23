@@ -26,6 +26,10 @@ module Boxxspring
     field     :meta_description
     field     :meta_title
     field     :slug
+
+    field     :provider
+    field     :provider_uid
+    field     :provider_url
     
     field     :sponsor_id
     field     :template_id
