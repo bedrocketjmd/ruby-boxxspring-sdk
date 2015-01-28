@@ -64,7 +64,7 @@ module Boxxspring
         resource_attributes = resource_attribute_index[ name ][ key ]
         if resource_attributes.present? 
           type_name = resource_attributes[ 'type_name' ] || self.type_name
-          klass = Boxxspring.const_get( type_name.classify ) rescue nil
+          klass = Boxxspring.const_get( type_name.camelize ) rescue nil
           if klass.present?
             result = klass.new( 
               resource_attributes, 
