@@ -9,6 +9,7 @@ module Boxxspring
     field   :type_name
     field   :name
     field   :provider
+    field   :last_polled_at
 
     field   :original
 
