@@ -6,8 +6,9 @@ module Boxxspring
     field   :updated_at
 
     field   :id
-    field   :name
     field   :type_name
+    field   :name
+    field   :provider
 
     field   :original
 
