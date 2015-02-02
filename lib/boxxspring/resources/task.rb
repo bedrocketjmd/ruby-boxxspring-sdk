@@ -8,6 +8,8 @@ module Boxxspring
     field   :id
     field   :property_id
 
+    field   :subject_id
+    field   :subject_type_name
     field   :state
     field   :message
     field   :started_at
