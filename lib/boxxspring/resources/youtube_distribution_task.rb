@@ -1,0 +1,11 @@
+module Boxxspring
+
+  class YoutubeDistributionTask < Task
+
+    field   :distribution_id
+    field   :video_title
+    field   :video_description
+    field   :video_tags
+  end
+
+end
