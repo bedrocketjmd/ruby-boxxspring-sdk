@@ -41,6 +41,7 @@ module Boxxspring
     has_many  :cards  
     has_many  :sponsors 
     has_many  :advertisements 
+    has_many  :locations
 
   end
 
