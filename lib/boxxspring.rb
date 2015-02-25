@@ -68,6 +68,6 @@ require 'boxxspring/resources/youtube_distribution'
 require 'boxxspring/resources/facebook_distribution_task'
 require 'boxxspring/resources/twitter_distribution_task'
 require 'boxxspring/resources/youtube_distribution_task'
-require 'boxxspring/resources/location'
+require 'boxxspring/resources/artifact_location'
 
 require 'boxxspring/resources/youtube_channel_service'

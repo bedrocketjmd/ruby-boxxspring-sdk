@@ -1,5 +1,5 @@
 module Boxxspring
-  class Location < Base 
+  class ArtifactLocation < Base 
     
     field  :type_name
     field  :id
