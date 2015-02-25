@@ -11,6 +11,8 @@ module Boxxspring
     field  :filename
     field  :content_type
     field  :size
+    field  :height
+    field  :width
 
   end
 

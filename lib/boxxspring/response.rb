@@ -3,6 +3,7 @@ module Boxxspring
   class Response
 
     attr_reader :code
+    attr_reader :body
     attr_reader :resources 
     
     def initialize( http_response )
@@ -24,6 +25,7 @@ module Boxxspring
           message: "An unknown error occured (#{@code})."
         )
       end
+      @body = content
                       
     end
 

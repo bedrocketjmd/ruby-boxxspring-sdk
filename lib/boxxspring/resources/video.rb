@@ -12,6 +12,8 @@ module Boxxspring
     field  :size
     field  :duration
     field  :picture_id
+    field  :height
+    field  :width
 
     has_many :video_sources
     
