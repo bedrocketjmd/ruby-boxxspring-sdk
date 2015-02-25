@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class Service < Base
+  class LegacyService < Base
 
     field  :created_at
     field  :updated_at
