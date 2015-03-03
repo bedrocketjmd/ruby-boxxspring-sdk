@@ -10,6 +10,7 @@ module Boxxspring
     field :display_name
     field :thumbnail_url
     field :access_token
+    field :expires_at
   end
 
 end
