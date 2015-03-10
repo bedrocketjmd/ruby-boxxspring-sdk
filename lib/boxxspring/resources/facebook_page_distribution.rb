@@ -1,5 +1,5 @@
 module Boxxspring
-  class FacebookDistribution < Distribution
+  class FacebookPageDistribution < Distribution
     
     field  :post_type
     

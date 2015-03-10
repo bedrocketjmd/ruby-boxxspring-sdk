@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class FacebookDistributionTask < Task
+  class FacebookPageDistributionTask < Task
 
     field   :distribution_id
     field   :post_name
