@@ -8,6 +8,7 @@ module Boxxspring
     field  :id
     field  :provider
     field  :public_settings
+    field  :authorized
 
   end
 
