@@ -1,6 +1,7 @@
 module Boxxspring
 
   class SocialService < Base
+    
     field :type_name
     field :id
     field :created_at
@@ -11,6 +12,8 @@ module Boxxspring
     field :thumbnail_url
     field :access_token
     field :expires_at
+    field :authorized
+
   end
 
 end
