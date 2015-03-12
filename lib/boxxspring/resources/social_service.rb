@@ -1,7 +1,8 @@
 module Boxxspring
 
   class SocialService < Base
-    
+
+    field :property_id
     field :type_name
     field :id
     field :created_at
