@@ -14,12 +14,13 @@ module Boxxspring
         
         class_eval(
           "def #{name}(); " +
+          "@#{name}.is_a?( FalseClass ) ? @#{name} : (" +
              "@#{name} || " +
                ( options[ :default ].nil? ?
                   "nil" :
                   ( options[ :default ].is_a?( String ) ? 
                       "'#{options[ :default ]}'" : 
-                        "#{options[ :default ]}" ) ) + ";" +
+                        "#{options[ :default ]}" ) ) + ");" +
           "end;" +
           " " +
           "attr_writer :#{name};",
