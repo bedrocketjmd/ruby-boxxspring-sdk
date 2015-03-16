@@ -68,7 +68,7 @@ require 'boxxspring/resources/youtube_distribution'
 require 'boxxspring/resources/facebook_page_distribution_task'
 require 'boxxspring/resources/twitter_distribution_task'
 require 'boxxspring/resources/youtube_distribution_task'
-require 'boxxspring/resources/artifact_location'
+require 'boxxspring/resources/artifact_locator'
 
 require 'boxxspring/resources/youtube_channel_service'
 require 'boxxspring/resources/facebook_page_service'
