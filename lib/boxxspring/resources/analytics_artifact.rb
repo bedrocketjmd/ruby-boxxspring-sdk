@@ -38,6 +38,8 @@ module Boxxspring
     field     :wait_time_total
     field     :ad_count
     field     :ad_time_total
+    field     :visitor_uuid
+    field     :referer_domain
 
   end
 end
