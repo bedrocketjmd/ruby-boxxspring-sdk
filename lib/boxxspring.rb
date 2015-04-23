@@ -74,4 +74,4 @@ require 'boxxspring/resources/youtube_channel_service'
 require 'boxxspring/resources/facebook_page_service'
 require 'boxxspring/resources/twitter_service'
 
-require 'boxxspring/resources/analytics_artifact'
+require 'boxxspring/resources/analytics_media_sample'

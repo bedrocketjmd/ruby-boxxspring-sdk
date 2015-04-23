@@ -1,5 +1,5 @@
 module Boxxspring
-  class AnalyticsArtifact < Base
+  class AnalyticsMediaSample < Base
 
     field     :id
 
@@ -40,6 +40,8 @@ module Boxxspring
     field     :ad_time_total
     field     :visitor_uuid
     field     :referer_domain
+    field     :url
+    field     :url_domain
 
   end
 end
