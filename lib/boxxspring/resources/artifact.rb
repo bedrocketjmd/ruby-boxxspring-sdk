@@ -34,6 +34,9 @@ module Boxxspring
     field     :sponsor_id
     field     :template_id
 
+    field     :attribution_name
+    field     :attribution_url
+
     has_one   :attribution 
 
     has_many  :artifacts
