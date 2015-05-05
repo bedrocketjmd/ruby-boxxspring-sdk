@@ -79,5 +79,3 @@ require 'boxxspring/resources/analytics_media_sample'
 require 'boxxspring/resources/branding_rule'
 require 'boxxspring/resources/videos_branding_task'
 
-require 'boxxspring/resources/videos_interrogation_task'
-
