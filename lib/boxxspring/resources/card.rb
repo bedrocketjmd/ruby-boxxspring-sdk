@@ -15,6 +15,7 @@ module Boxxspring
     field   :provider_uid
     field   :provider_url
 
+    field   :attribution_id
     field   :properties
 
   end
