@@ -8,6 +8,8 @@ module Boxxspring
     field   :video_provider_uid
     field   :video_provider_url
     field   :video_originated_at
+    field   :video_originated_at
+    field   :provider_url
     field   :provider
     field   :attribution_name
     field   :attribution_provider_uid
