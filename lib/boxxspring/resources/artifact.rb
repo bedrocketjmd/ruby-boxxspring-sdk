@@ -33,6 +33,7 @@ module Boxxspring
     
     field     :sponsor_id
     field     :template_id
+    field     :attribution_id
 
     field     :attribution_name
     field     :attribution_url
