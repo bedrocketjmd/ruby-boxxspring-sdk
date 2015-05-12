@@ -65,15 +65,13 @@ module Boxxspring
         result = nil
         resource_attributes = resource_attribute_index[ name ][ key ]
         if resource_attributes.present? 
-          type_name = resource_attributes[ 'type_name' ]
           klass = nil 
-          klass = ( Boxxspring.const_get( type_name.camelize ) rescue nil ) \
-            if type_name.present?
-          if klass.nil?
-            type_name = options[ 'type_name' ]
-            klass = ( Boxxspring.const_get( type_name.camelize ) rescue nil ) \
-              if type_name.present?
-          end
+          klass = ( 
+            Boxxspring.const_get( resource_attributes[ 'type_name' ].camelize ) \
+              rescue nil 
+          ) if resource_attributes[ 'type_name' ].present?
+          klass = ( Boxxspring.const_get( self.type_name.camelize ) rescue nil ) \
+            if klass.nil? && self.type_name.present?
           if klass.present?
             result = klass.new( 
               resource_attributes, 
