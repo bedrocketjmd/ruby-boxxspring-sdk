@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class PostCard < Card
+  class TextArtifact < Base
   end
 
 end
