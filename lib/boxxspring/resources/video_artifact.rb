@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class TextCard < Card
+  class VideoArtifact < Base
   end
 
 end
