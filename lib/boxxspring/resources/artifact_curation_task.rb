@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class VideoArticleCurationTask < Task
+  class ArtifactCurationTask < Task
 
     field      :artifact_name
     field      :artifact_description
