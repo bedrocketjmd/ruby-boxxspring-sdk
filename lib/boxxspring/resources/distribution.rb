@@ -8,6 +8,7 @@ module Boxxspring
     field  :uploaded_at
     field  :name
     field  :service_id
+    field  :branding_rule_id
 
     has_one :service
     
