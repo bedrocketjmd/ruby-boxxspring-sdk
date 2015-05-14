@@ -82,5 +82,6 @@ require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/youtube_subscription_task'
 require 'boxxspring/resources/video_article_curation_task'
 require 'boxxspring/resources/youtube_subscription_metadata_task'
+require 'boxxspring/resources/artifact_curation_task'
 
 require 'boxxspring/resources/analytics_media_sample'
