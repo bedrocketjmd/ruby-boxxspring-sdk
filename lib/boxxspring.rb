@@ -85,3 +85,7 @@ require 'boxxspring/resources/youtube_subscription_metadata_task'
 require 'boxxspring/resources/artifact_curation_task'
 
 require 'boxxspring/resources/analytics_media_sample'
+
+require 'boxxspring/resources/branding_rule'
+require 'boxxspring/resources/videos_branding_task'
+

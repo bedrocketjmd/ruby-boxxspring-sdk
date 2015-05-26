@@ -11,6 +11,7 @@ module Boxxspring
     field  :branding_rule_id
 
     has_one :service
+    has_one :branding_rule
     
   end
 end
