@@ -1,13 +1,13 @@
 module Boxxspring
 
-	class ThemeEnvironment < Base
+  class ThemeEnvironment < Base
 
     field     :id
 
     field     :created_at
     field     :updated_at
 
-    field     :order
+    field     :position
     field     :code_name
     field     :name
     field     :description
@@ -16,6 +16,6 @@ module Boxxspring
 
     has_one   :user_agent
 
-	end
+  end
 
 end

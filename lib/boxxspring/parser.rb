@@ -42,12 +42,14 @@ module Boxxspring
     def resources
       result = nil
       unless self.name.blank?
-        result = self.keys.map { | key | self.resource_by( name, key ) }
+        result = self.keys.map do | key | 
+          self.resource_by( name, key, { 'type_name' => self.type_name } ) 
+        end
       end
       result
     end
 
-    def resource_by( name, key )
+    def resource_by( name, key, options = {} )
 
       @resources_index ||= Hash.new { | hash, key | hash[ key ] = {} }
       @resource_index_mutex ||= Hash.new { | hash, key | hash[ key ] = [] }
@@ -63,8 +65,15 @@ module Boxxspring
         result = nil
         resource_attributes = resource_attribute_index[ name ][ key ]
         if resource_attributes.present? 
-          type_name = resource_attributes[ 'type_name' ] || self.type_name
-          klass = Boxxspring.const_get( type_name.camelize ) rescue nil
+          type_name = resource_attributes[ 'type_name' ]
+          klass = nil 
+          klass = ( Boxxspring.const_get( type_name.camelize ) rescue nil ) \
+            if type_name.present?
+          if klass.nil?
+            type_name = options[ 'type_name' ]
+            klass = ( Boxxspring.const_get( type_name.camelize ) rescue nil ) \
+              if type_name.present?
+          end
           if klass.present?
             result = klass.new( 
               resource_attributes, 
@@ -92,8 +101,13 @@ module Boxxspring
         if association.present?
           association.each do | key, value |
             unless key == 'id'
-              result[ key ] = value.map do | associated_id |
-                self.resource_by( key, associated_id )
+              type_name = value[ 'type_name' ]
+              result[ key ] = ( value[ 'ids' ] || [] ).map do | associated_id |
+                self.resource_by( 
+                  key, 
+                  associated_id, 
+                  { 'type_name' => type_name } 
+                )
               end
               result[ key ].compact!
             end

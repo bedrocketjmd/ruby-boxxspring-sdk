@@ -30,20 +30,20 @@ module Boxxspring
     field     :provider
     field     :provider_uid
     field     :provider_url
-    
+
     field     :sponsor_id
     field     :template_id
+    field     :attribution_id
 
     field     :attribution_name
     field     :attribution_url
 
-    has_one   :attribution 
+    has_one   :attribution
 
     has_many  :artifacts
     has_many  :pictures
-    has_many  :cards  
-    has_many  :sponsors 
-    has_many  :advertisements 
+    has_many  :sponsors
+    has_many  :advertisements
     has_many  :artifact_locators
 
   end
