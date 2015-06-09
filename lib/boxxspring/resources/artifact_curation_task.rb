@@ -23,6 +23,7 @@ module Boxxspring
     field      :attribution_provider_uid
     field      :attribution_picture_url
     field      :artifact_id
+    field      :artifact_original
     field      :artifact_ids
     
   end
