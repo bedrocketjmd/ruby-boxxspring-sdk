@@ -10,6 +10,7 @@ module Boxxspring
     field   :name
     field   :provider
     field   :last_polled_at
+    field   :time_to_live
 
     field   :original
 
