@@ -19,6 +19,8 @@ require 'boxxspring/resources/attribute_error'
 require 'boxxspring/resources/malformed_parameter_error'
 require 'boxxspring/resources/not_found_error'
 
+
+require 'boxxspring/resources/property' 
 require 'boxxspring/resources/picture'
 require 'boxxspring/resources/user_agent'
 require 'boxxspring/resources/theme_environment'
@@ -33,43 +35,47 @@ require 'boxxspring/resources/video'
 require 'boxxspring/resources/video_source'
 require 'boxxspring/resources/artifact_relationship'
 require 'boxxspring/resources/artifact'
-require 'boxxspring/resources/property'
+require 'boxxspring/resources/artifact_locator'
+
+
+# Services
 require 'boxxspring/resources/service'
 require 'boxxspring/resources/legacy_service'
 require 'boxxspring/resources/social_service'
+require 'boxxspring/resources/facebook_page_service'
+require 'boxxspring/resources/twitter_service'
+require 'boxxspring/resources/youtube_channel_service'
+require 'boxxspring/resources/dailymotion_channel_service'
 require 'boxxspring/resources/source'
+require 'boxxspring/resources/distribution'
+require 'boxxspring/resources/verizon_distribution'
+require 'boxxspring/resources/facebook_page_distribution'
+require 'boxxspring/resources/twitter_distribution'
+require 'boxxspring/resources/youtube_distribution'
+require 'boxxspring/resources/dailymotion_distribution'
+require 'boxxspring/resources/branding_rule'
+
+
+## Tasks
 require 'boxxspring/resources/task'
 require 'boxxspring/resources/videos_ingestion_task'
 require 'boxxspring/resources/videos_interrogation_task'
 require 'boxxspring/resources/videos_picture_task'
 require 'boxxspring/resources/feed_generation_task'
 require 'boxxspring/resources/subscription_ingestion_task'
-require 'boxxspring/resources/sample'
-require 'boxxspring/resources/metric'
-require 'boxxspring/resources/distribution'
-require 'boxxspring/resources/facebook_page_distribution'
-require 'boxxspring/resources/twitter_distribution'
-require 'boxxspring/resources/youtube_distribution'
 require 'boxxspring/resources/facebook_page_distribution_task'
 require 'boxxspring/resources/twitter_distribution_task'
 require 'boxxspring/resources/youtube_distribution_task'
-require 'boxxspring/resources/artifact_locator'
-require 'boxxspring/resources/verizon_distribution'
+require 'boxxspring/resources/dailymotion_distribution_task'
 require 'boxxspring/resources/verizon_distribution_task'
-
-
-require 'boxxspring/resources/youtube_channel_service'
-require 'boxxspring/resources/facebook_page_service'
-require 'boxxspring/resources/twitter_service'
-require 'boxxspring/resources/videos_curation_task'
-
 require 'boxxspring/resources/youtube_subscription_task'
 require 'boxxspring/resources/video_article_curation_task'
 require 'boxxspring/resources/youtube_subscription_metadata_task'
 require 'boxxspring/resources/artifact_curation_task'
-
-require 'boxxspring/resources/analytics_media_sample'
-
-require 'boxxspring/resources/branding_rule'
+require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/videos_branding_task'
 
+
+require 'boxxspring/resources/sample'
+require 'boxxspring/resources/metric'
+require 'boxxspring/resources/analytics_media_sample'
