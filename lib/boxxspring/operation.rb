@@ -11,6 +11,19 @@ module Boxxspring
       self.spawn( parameters )
     end
 
+    def destroy
+      result = nil
+      Boxxspring::Request.new.tap do | request |
+        # serializer = Boxxspring::Serializer.new( objects )
+        response = request.destroy( @path, @parameters )
+        # , serializer.serialize( node )
+        if response.present?
+          result = response.resources
+        end
+      end
+      result
+    end 
+
     def order( by, direction = 'desc' )
       self.spawn( sort_by: by, sort_direction: direction )
     end
