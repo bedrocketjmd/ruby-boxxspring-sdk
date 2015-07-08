@@ -8,6 +8,7 @@ module Boxxspring
     field   :video_tags
     field   :video_published
     field   :video_channel_id
+    field   :video_featured
   end
 
 end
