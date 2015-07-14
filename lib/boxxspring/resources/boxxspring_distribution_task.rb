@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class BoxxspringDistributionTask < BoxxspringDistributionTask
+  class BoxxspringDistributionTask < Task
 
     field :name
     field :description
