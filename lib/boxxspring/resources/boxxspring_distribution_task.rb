@@ -2,6 +2,7 @@ module Boxxspring
 
   class BoxxspringDistributionTask < Task
 
+    field :distribution_id
     field :name
     field :description
     field :short_name
@@ -11,7 +12,6 @@ module Boxxspring
     field :seo_description
     field :url_slug
     field :artifact_relationship_ids
-    field :distribution_id
 
   end
 
