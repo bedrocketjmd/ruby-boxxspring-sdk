@@ -7,7 +7,7 @@ module Boxxspring
     field   :video_description
     field   :video_tags
     field   :video_category_id
-    field   :video_published
+    field   :video_public
     field   :video_featured
   end
 
