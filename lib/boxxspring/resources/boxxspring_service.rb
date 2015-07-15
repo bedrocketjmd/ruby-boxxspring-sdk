@@ -2,7 +2,7 @@ module Boxxspring
 
   class BoxxspringService < Service
     
-    field  :property_id
+    field  :destination_id
     field  :name
   end
 
