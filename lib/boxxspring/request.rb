@@ -22,6 +22,25 @@ module Boxxspring
   
     end
 
+    def destroy( path, parameters = {} )
+
+      begin  
+               
+        request = Net::HTTP::Delete.new( 
+          compose_request_path( path, parameters ), 
+          { 'Content-Type' =>'application/json' }
+        )
+
+        response = Response.new( @http.request( request ) )
+        
+      rescue Timeout::Error
+        response = nil
+      end
+
+      response
+    
+    end
+
     def get( path, parameters = {} )
   
       response = nil

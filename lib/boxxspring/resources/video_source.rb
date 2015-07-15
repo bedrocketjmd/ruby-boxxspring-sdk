@@ -13,7 +13,7 @@ module Boxxspring
     field  :width
     field  :height
 
-    has_many :segments
+    has_many :video_source_segments
 
   end
 
