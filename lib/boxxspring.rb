@@ -41,6 +41,7 @@ require 'boxxspring/resources/artifact_locator'
 
 # Services
 require 'boxxspring/resources/service'
+require 'boxxspring/resources/setting'
 require 'boxxspring/resources/legacy_service'
 require 'boxxspring/resources/social_service'
 require 'boxxspring/resources/facebook_page_service'
