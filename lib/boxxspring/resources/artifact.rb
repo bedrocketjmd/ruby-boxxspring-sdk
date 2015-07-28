@@ -38,6 +38,8 @@ module Boxxspring
     field     :attribution_name
     field     :attribution_url
 
+    field     :property_id
+
     has_one   :attribution
 
     has_many  :artifacts
@@ -45,6 +47,7 @@ module Boxxspring
     has_many  :sponsors
     has_many  :advertisements
     has_many  :artifact_locators
+
 
   end
 
