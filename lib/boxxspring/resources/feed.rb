@@ -12,6 +12,10 @@ module Boxxspring
     field   :code_name
 
     field   :time_to_live
+    field   :media_type
+    field   :media_player
+    field   :media_provider
+
     has_one :filter
 
   end
