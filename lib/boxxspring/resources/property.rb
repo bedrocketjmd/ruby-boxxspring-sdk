@@ -1,6 +1,6 @@
 module Boxxspring
 
-	class Property < Base
+  class Property < Base
 
     field   :id
 
@@ -33,6 +33,6 @@ module Boxxspring
       Boxxspring::Operation.new( File.join( '/properties', self.id.to_s, path ) )
     end
 
-	end
+  end
 
 end
