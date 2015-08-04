@@ -11,7 +11,7 @@ module Boxxspring
     field :seo_title
     field :seo_description
     field :url_slug
-    field :artifact_relationship_ids
+    field :artifact_ids
 
   end
 
