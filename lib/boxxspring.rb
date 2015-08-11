@@ -20,7 +20,7 @@ require 'boxxspring/resources/malformed_parameter_error'
 require 'boxxspring/resources/not_found_error'
 
 
-require 'boxxspring/resources/property' 
+require 'boxxspring/resources/property'
 require 'boxxspring/resources/picture'
 require 'boxxspring/resources/user_agent'
 require 'boxxspring/resources/theme_environment'
@@ -42,6 +42,7 @@ require 'boxxspring/resources/artifact_locator'
 # Services
 require 'boxxspring/resources/service'
 require 'boxxspring/resources/setting'
+require 'boxxspring/resources/sponsor'
 require 'boxxspring/resources/legacy_service'
 require 'boxxspring/resources/social_service'
 require 'boxxspring/resources/facebook_page_service'
