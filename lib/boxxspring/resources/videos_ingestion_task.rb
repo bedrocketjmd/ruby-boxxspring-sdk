@@ -12,7 +12,6 @@ module Boxxspring
     field   :provider_url
     field   :video_file_url
     field   :picture_file_url
-    field   :artifact_locators
 
   end
 
