@@ -14,7 +14,7 @@ module Boxxspring
     field   :picture_file_url
     field   :alternate_provider
     field   :alternate_provider_url
-    field   :autopublish
+    field   :auto_publish
 
   end
 
