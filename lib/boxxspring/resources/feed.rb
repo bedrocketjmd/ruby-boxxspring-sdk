@@ -16,6 +16,8 @@ module Boxxspring
     field   :media_player
     field   :media_provider
 
+    field   :permalink
+
     has_one :filter
 
   end
