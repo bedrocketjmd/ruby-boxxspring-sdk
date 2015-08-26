@@ -12,6 +12,9 @@ module Boxxspring
     field   :provider_url
     field   :video_file_url
     field   :picture_file_url
+    field   :alternate_provider
+    field   :alternate_provider_url
+    field   :auto_publish
 
   end
 
