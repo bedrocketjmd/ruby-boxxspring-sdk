@@ -38,31 +38,51 @@ module Boxxspring
       self.spawn( :include => self.normalize_include( *arguments ) )
     end
 
-    def query
+    def query( &block )
       result = nil
       Boxxspring::Request.new.tap do | request |
         request.get( @path, @parameters ).tap do | response |
           result = response.resources
-          result = result.first if result.length > 0 && @result == Object 
+          if block_given?
+            case block.arity 
+              when 0; yield 
+              when 1; yield result
+              when 2; yield result, response
+            end
+          end  
         end
       end
       result
     end
 
-    def read 
+    def read( &block )
       result = self.query
       result = result.first if result.present? && result.is_a?( Enumerable )
+      if block_given?
+        case block.arity 
+          when 0; yield 
+          when 1; yield result
+          when 2; yield result, response
+        end
+      end 
       result
     end
 
-    def write( node, objects ) 
+    def write( node, objects, &block ) 
       result = nil
       Boxxspring::Request.new.tap do | request |
         serializer = Boxxspring::Serializer.new( objects )
         response = request.post( @path, @parameters, serializer.serialize( node ) )
         if response.present?
           result = response.resources
-        end
+          if block_given?
+            case block.arity 
+              when 0; yield 
+              when 1; yield result
+              when 2; yield result, response
+            end
+          end        
+        end 
       end
       result
     end
