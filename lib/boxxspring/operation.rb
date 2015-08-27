@@ -2,9 +2,9 @@ module Boxxspring
 
   class Operation 
 
-    def initialize( path )
+    def initialize( path, parameters = {} )
       @path = path 
-      @parameters = {}
+      @parameters = ( parameters || {} ).deep_dup
     end
 
     def where( parameters )
