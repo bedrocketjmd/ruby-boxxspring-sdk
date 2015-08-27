@@ -83,7 +83,7 @@ require 'boxxspring/resources/vimeo_subscription_metadata_task'
 require 'boxxspring/resources/artifact_curation_task'
 require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/videos_branding_task'
-require 'boxxspring/resources/clip_creator_task'
+require 'boxxspring/resources/clip_creation_task'
 
 
 require 'boxxspring/resources/sample'

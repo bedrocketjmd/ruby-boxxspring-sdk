@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class ClipCreatorTask < Task
+  class ClipCreationTask < Task
 
     field :in_point
     field :out_point
