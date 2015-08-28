@@ -56,15 +56,22 @@ module Boxxspring
     end
 
     def read( &block )
-      result = self.query
-      result = result.first if result.present? && result.is_a?( Enumerable )
-      if block_given?
-        case block.arity 
-          when 0; yield 
-          when 1; yield result
-          when 2; yield result, response
-        end
-      end 
+      response = nil
+      result = nil
+      self.query do | _result, _response | 
+        result = _result
+        response = _response 
+      end
+      if response.success? 
+        result = result.first if result.present? && result.is_a?( Enumerable )
+        if block_given?
+          case block.arity 
+            when 0; yield 
+            when 1; yield result
+            when 2; yield result, response
+          end
+        end 
+      end
       result
     end
 
