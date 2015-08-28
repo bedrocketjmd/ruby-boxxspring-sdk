@@ -86,6 +86,7 @@ require 'boxxspring/resources/videos_branding_task'
 require 'boxxspring/resources/clip_creation_task'
 
 
+
 require 'boxxspring/resources/sample'
 require 'boxxspring/resources/metric'
 require 'boxxspring/resources/analytics_media_sample'
