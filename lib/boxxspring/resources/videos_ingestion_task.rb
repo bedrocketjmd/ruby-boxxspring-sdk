@@ -15,7 +15,8 @@ module Boxxspring
     field   :alternate_provider
     field   :alternate_provider_url
     field   :auto_publish
-    field   :clip_parent_artifact_id 
+    field   :artifact_id 
+    field   :video_id
 
   end
 
