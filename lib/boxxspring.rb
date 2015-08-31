@@ -62,6 +62,7 @@ require 'boxxspring/resources/branding_rule'
 
 ## Tasks
 require 'boxxspring/resources/task'
+require 'boxxspring/resources/task_dependent'
 require 'boxxspring/resources/videos_ingestion_task'
 require 'boxxspring/resources/videos_interrogation_task'
 require 'boxxspring/resources/videos_picture_task'
