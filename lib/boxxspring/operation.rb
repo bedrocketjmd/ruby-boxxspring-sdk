@@ -5,6 +5,22 @@ module Boxxspring
     def initialize( path, parameters = {} )
       @path = path 
       @parameters = ( parameters || {} ).deep_dup
+      @key = nil
+    end
+
+    def key
+      return @key ||= begin
+        result = 0
+        query = @parameters.to_param
+        if ( @path.present? || @query.present? )          
+          query = query.split( '&' ).sort.join( '&' )
+          addressable = Addressable::URI.new      
+          addressable.path = @path 
+          addressable.query = query unless query.blank?
+          result = FNV.new.fnv1a_32( addressable.to_s )
+        end  
+        result     
+      end
     end
 
     def where( parameters )
