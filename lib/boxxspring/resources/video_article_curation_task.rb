@@ -15,6 +15,7 @@ module Boxxspring
     field   :artifact_id
     field   :artifact_slug
     field   :artifact_ids
+    field   :publish
     
   end
 
