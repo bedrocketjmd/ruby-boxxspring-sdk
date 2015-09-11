@@ -2,9 +2,25 @@ module Boxxspring
 
   class Operation 
 
-    def initialize( path, parameters = {}, result = Array )
+    def initialize( path, parameters = {} )
       @path = path 
       @parameters = ( parameters || {} ).deep_dup
+      @key = nil
+    end
+
+    def key
+      return @key ||= begin
+        result = 0
+        query = @parameters.to_param
+        if ( @path.present? || @query.present? )          
+          query = query.split( '&' ).sort.join( '&' )
+          addressable = Addressable::URI.new      
+          addressable.path = @path 
+          addressable.query = query unless query.blank?
+          result = FNV.new.fnv1a_32( addressable.to_s )
+        end  
+        result     
+      end
     end
 
     def where( parameters )
@@ -38,31 +54,58 @@ module Boxxspring
       self.spawn( :include => self.normalize_include( *arguments ) )
     end
 
-    def query
+    def query( &block )
       result = nil
       Boxxspring::Request.new.tap do | request |
         request.get( @path, @parameters ).tap do | response |
           result = response.resources
-          result = result.first if result.length > 0 && @result == Object 
+          if block_given?
+            case block.arity 
+              when 0; yield 
+              when 1; yield result
+              when 2; yield result, response
+            end
+          end  
         end
       end
       result
     end
 
-    def read 
-      result = self.query
-      result = result.first if result.present? && result.is_a?( Enumerable )
+    def read( &block )
+      response = nil
+      result = nil
+      self.query do | _result, _response | 
+        result = _result
+        response = _response 
+      end
+      if response.success? 
+        result = result.first if result.present? && result.is_a?( Enumerable )
+        if block_given?
+          case block.arity 
+            when 0; yield 
+            when 1; yield result
+            when 2; yield result, response
+          end
+        end 
+      end
       result
     end
 
-    def write( node, objects ) 
+    def write( node, objects, &block ) 
       result = nil
       Boxxspring::Request.new.tap do | request |
         serializer = Boxxspring::Serializer.new( objects )
         response = request.post( @path, @parameters, serializer.serialize( node ) )
         if response.present?
           result = response.resources
-        end
+          if block_given?
+            case block.arity 
+              when 0; yield 
+              when 1; yield result
+              when 2; yield result, response
+            end
+          end        
+        end 
       end
       result
     end

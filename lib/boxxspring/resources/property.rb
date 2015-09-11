@@ -21,11 +21,23 @@ module Boxxspring
 
     has_many  :groups
     has_many  :pages
-    has_many  :services
-    has_many  :settings
     has_many  :pictures
+
     has_one   :theme
     has_one   :default_advertisement
+
+    has_many  :services
+    has_many  :settings
+    def settings_content_by_name( name, default_result = nil )
+      setting = self.settings.detect { | setting | setting.name == name }
+      result = setting.nil? ? default_result : setting.content 
+
+      # convert the result to boolean when boolean
+      result = true if result =~ ( /(true)$/i )
+      result = false if result =~ ( /(false)$/i )
+
+      result 
+    end
 
     has_many  :errors
 

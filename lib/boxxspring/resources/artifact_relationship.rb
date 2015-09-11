@@ -12,6 +12,6 @@ module Boxxspring
     field  :name
 
     has_one :artifact
-    
+    has_one :related_artifact
   end
 end
