@@ -16,6 +16,7 @@ module Boxxspring
 
     field   :auto_publish
     field   :source_url
+    field   :state
 
     has_many  :artifacts
 
