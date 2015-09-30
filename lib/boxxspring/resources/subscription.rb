@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class Source < Base
+  class Subscription < Base
 
     field   :created_at
     field   :updated_at
