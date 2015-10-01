@@ -1,6 +1,5 @@
 require 'active_support'
 require 'active_support/all'
-require 'multi_json'
 require 'fnv'
 
 require 'boxxspring/configuration'

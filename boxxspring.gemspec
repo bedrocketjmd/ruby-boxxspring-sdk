@@ -18,7 +18,6 @@ Gem::Specification.new do | gem |
   gem.require_paths  = [ 'lib' ]
   gem.files          = Dir.glob( "{lib}/**/*" )
 
-  gem.add_runtime_dependency( "multi_json", "~> 1" )
   gem.add_runtime_dependency( "activesupport", "~> 4.2" )
   gem.add_runtime_dependency( "addressable" )
   gem.add_runtime_dependency( "fnv", '~> 0.2' )
