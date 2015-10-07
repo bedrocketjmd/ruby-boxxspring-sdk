@@ -44,7 +44,7 @@ module Boxxspring
       body = http_response.body;
       unless body.nil? || body.empty?
         response = 
-          MultiJson.decode( http_response.body ) rescue nil
+          JSON.parse( body ) rescue nil
       end
       
       response

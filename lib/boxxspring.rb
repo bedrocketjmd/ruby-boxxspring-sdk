@@ -1,6 +1,5 @@
 require 'active_support'
 require 'active_support/all'
-require 'multi_json'
 require 'fnv'
 
 require 'boxxspring/configuration'
@@ -63,6 +62,7 @@ require 'boxxspring/resources/branding_rule'
 
 ## Tasks
 require 'boxxspring/resources/task'
+require 'boxxspring/resources/task_dependent'
 require 'boxxspring/resources/videos_ingestion_task'
 require 'boxxspring/resources/videos_interrogation_task'
 require 'boxxspring/resources/videos_picture_task'
@@ -84,6 +84,8 @@ require 'boxxspring/resources/vimeo_subscription_metadata_task'
 require 'boxxspring/resources/artifact_curation_task'
 require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/videos_branding_task'
+require 'boxxspring/resources/clip_creation_task'
+
 
 
 require 'boxxspring/resources/sample'
