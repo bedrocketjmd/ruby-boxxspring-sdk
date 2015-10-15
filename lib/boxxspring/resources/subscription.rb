@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class Source < Base
+  class Subscription < Base
 
     field   :created_at
     field   :updated_at
@@ -15,7 +15,7 @@ module Boxxspring
     field   :original
 
     field   :auto_publish
-    field   :source_url
+    field   :url
     field   :state
 
     has_many  :artifacts

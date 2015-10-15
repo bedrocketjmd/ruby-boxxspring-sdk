@@ -39,7 +39,7 @@ require 'boxxspring/resources/artifact'
 require 'boxxspring/resources/artifact_locator'
 
 
-# Services
+# Services & Distributions
 require 'boxxspring/resources/service'
 require 'boxxspring/resources/setting'
 require 'boxxspring/resources/sponsor'
@@ -49,7 +49,7 @@ require 'boxxspring/resources/facebook_page_service'
 require 'boxxspring/resources/twitter_service'
 require 'boxxspring/resources/youtube_channel_service'
 require 'boxxspring/resources/dailymotion_channel_service'
-require 'boxxspring/resources/source'
+require 'boxxspring/resources/subscription'
 require 'boxxspring/resources/distribution'
 require 'boxxspring/resources/verizon_distribution'
 require 'boxxspring/resources/facebook_page_distribution'
@@ -57,6 +57,7 @@ require 'boxxspring/resources/twitter_distribution'
 require 'boxxspring/resources/youtube_distribution'
 require 'boxxspring/resources/dailymotion_distribution'
 require 'boxxspring/resources/boxxspring_distribution'
+require 'boxxspring/resources/distribution_activity'
 require 'boxxspring/resources/branding_rule'
 
 
