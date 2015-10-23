@@ -92,3 +92,7 @@ require 'boxxspring/resources/clip_creation_task'
 require 'boxxspring/resources/sample'
 require 'boxxspring/resources/metric'
 require 'boxxspring/resources/analytics_media_sample'
+
+require 'boxxspring/resources/stream'
+require 'boxxspring/resources/token'
+
