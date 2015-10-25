@@ -37,6 +37,7 @@ require 'boxxspring/resources/video_source_segment'
 require 'boxxspring/resources/artifact_relationship'
 require 'boxxspring/resources/artifact'
 require 'boxxspring/resources/artifact_locator'
+require 'boxxspring/resources/token'
 
 
 # Services & Distributions
@@ -87,8 +88,12 @@ require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/videos_branding_task'
 require 'boxxspring/resources/clip_creation_task'
 
-
-
+## Analytics
 require 'boxxspring/resources/sample'
 require 'boxxspring/resources/metric'
 require 'boxxspring/resources/analytics_media_sample'
+
+## Live
+require 'boxxspring/resources/stream'
+
+
