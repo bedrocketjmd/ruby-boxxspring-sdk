@@ -9,6 +9,8 @@ module Boxxspring
     field     :recording
     field     :recording_state
     field     :state
+    field     :picture_id
+    field     :uuid
 
   end
 
