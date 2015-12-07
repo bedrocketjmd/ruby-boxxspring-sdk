@@ -19,7 +19,6 @@ require 'boxxspring/resources/attribute_error'
 require 'boxxspring/resources/malformed_parameter_error'
 require 'boxxspring/resources/not_found_error'
 
-
 require 'boxxspring/resources/property'
 require 'boxxspring/resources/picture'
 require 'boxxspring/resources/user_agent'
@@ -34,11 +33,12 @@ require 'boxxspring/resources/advertising_liverail_advertisement'
 require 'boxxspring/resources/video'
 require 'boxxspring/resources/video_source'
 require 'boxxspring/resources/video_source_segment'
+require 'boxxspring/resources/video_text'
+require 'boxxspring/resources/video_track'
 require 'boxxspring/resources/artifact_relationship'
 require 'boxxspring/resources/artifact'
 require 'boxxspring/resources/artifact_locator'
 require 'boxxspring/resources/token'
-
 
 # Services & Distributions
 require 'boxxspring/resources/service'
@@ -60,7 +60,6 @@ require 'boxxspring/resources/dailymotion_distribution'
 require 'boxxspring/resources/boxxspring_distribution'
 require 'boxxspring/resources/distribution_activity'
 require 'boxxspring/resources/branding_rule'
-
 
 ## Tasks
 require 'boxxspring/resources/task'
