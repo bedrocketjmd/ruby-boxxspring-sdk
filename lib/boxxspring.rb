@@ -19,7 +19,6 @@ require 'boxxspring/resources/attribute_error'
 require 'boxxspring/resources/malformed_parameter_error'
 require 'boxxspring/resources/not_found_error'
 
-
 require 'boxxspring/resources/property'
 require 'boxxspring/resources/picture'
 require 'boxxspring/resources/user_agent'
@@ -34,12 +33,14 @@ require 'boxxspring/resources/advertising_liverail_advertisement'
 require 'boxxspring/resources/video'
 require 'boxxspring/resources/video_source'
 require 'boxxspring/resources/video_source_segment'
+require 'boxxspring/resources/video_text'
+require 'boxxspring/resources/video_track'
 require 'boxxspring/resources/artifact_relationship'
 require 'boxxspring/resources/artifact'
 require 'boxxspring/resources/artifact_locator'
+require 'boxxspring/resources/token'
 
-
-# Services
+# Services & Distributions
 require 'boxxspring/resources/service'
 require 'boxxspring/resources/setting'
 require 'boxxspring/resources/sponsor'
@@ -49,7 +50,7 @@ require 'boxxspring/resources/facebook_page_service'
 require 'boxxspring/resources/twitter_service'
 require 'boxxspring/resources/youtube_channel_service'
 require 'boxxspring/resources/dailymotion_channel_service'
-require 'boxxspring/resources/source'
+require 'boxxspring/resources/subscription'
 require 'boxxspring/resources/distribution'
 require 'boxxspring/resources/verizon_distribution'
 require 'boxxspring/resources/facebook_page_distribution'
@@ -57,8 +58,8 @@ require 'boxxspring/resources/twitter_distribution'
 require 'boxxspring/resources/youtube_distribution'
 require 'boxxspring/resources/dailymotion_distribution'
 require 'boxxspring/resources/boxxspring_distribution'
+require 'boxxspring/resources/distribution_activity'
 require 'boxxspring/resources/branding_rule'
-
 
 ## Tasks
 require 'boxxspring/resources/task'
@@ -81,13 +82,18 @@ require 'boxxspring/resources/video_article_curation_task'
 require 'boxxspring/resources/youtube_subscription_metadata_task'
 require 'boxxspring/resources/twitter_subscription_metadata_task'
 require 'boxxspring/resources/vimeo_subscription_metadata_task'
+require 'boxxspring/resources/dailymotion_subscription_metadata_task'
 require 'boxxspring/resources/artifact_curation_task'
 require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/videos_branding_task'
 require 'boxxspring/resources/clip_creation_task'
 
-
-
+## Analytics
 require 'boxxspring/resources/sample'
 require 'boxxspring/resources/metric'
 require 'boxxspring/resources/analytics_media_sample'
+
+## Live
+require 'boxxspring/resources/stream'
+
+

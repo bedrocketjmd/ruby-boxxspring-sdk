@@ -32,6 +32,9 @@ module Boxxspring
     field     :audio_channel_layout
     
     has_many  :video_sources
+    has_many  :tracks
+
+    has_many  :texts
     
   end
 

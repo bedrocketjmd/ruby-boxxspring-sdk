@@ -6,6 +6,8 @@ module Boxxspring
     field  :updated_at
 
     field  :id
+    field  :uuid
+    field  :operator
 
     has_many :filter_criteria
 

@@ -8,8 +8,8 @@ module Boxxspring
     field  :id
     field  :filter_id
     field  :condition
-
-    has_many :artifacts
+    field  :field
+    field  :values
 
   end
 
