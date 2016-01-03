@@ -17,13 +17,13 @@ module Boxxspring
 
     field     :codec
     field     :codec_long
-    field     :color_and_chroma
+    field     :pixel_format
     field     :profile
     field     :level
     field     :bit_rate
     field     :frame_rate
     field     :display_aspect_ratio
-    field     :sample_aspect_ratio
+    field     :storage_aspect_ratio
     field     :audio_codec
     field     :audio_codec_long
     field     :audio_channels
