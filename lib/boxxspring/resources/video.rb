@@ -14,7 +14,7 @@ module Boxxspring
     field     :picture_id
     field     :height
     field     :width
-
+    field     :resolution
     field     :codec
     field     :codec_long
     field     :pixel_format
