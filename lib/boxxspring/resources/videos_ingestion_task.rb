@@ -15,6 +15,7 @@ module Boxxspring
     field   :alternate_provider
     field   :alternate_provider_url
     field   :auto_publish
+    field   :artifact_id
 
   end
 
