@@ -37,6 +37,7 @@ require 'boxxspring/resources/user_agent'
 require 'boxxspring/resources/filter'
 require 'boxxspring/resources/filter_criteria'
 require 'boxxspring/resources/advertising_campaign'
+require 'boxxspring/resources/advertising_freewheel_advertisement'
 require 'boxxspring/resources/advertising_doubleclick_advertisement'
 require 'boxxspring/resources/advertising_liverail_advertisement'
 
