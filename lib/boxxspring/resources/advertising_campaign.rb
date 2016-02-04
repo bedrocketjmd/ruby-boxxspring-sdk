@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class AdvertisingCampaign < Base 
+  class AdvertisingCampaign < Base
     field  :name
     field  :url_pattern
     field  :filter_id
@@ -10,7 +10,8 @@ module Boxxspring
     field  :position
     field  :published_at
 
-    has_many :advertisements
+    has_one  :video_advertisement
+    has_one  :display_advertisement
     has_one  :filter
   end
 
