@@ -11,6 +11,7 @@ require 'boxxspring/operation'
 
 require 'boxxspring/resources/base'
 
+# Errors
 require 'boxxspring/resources/error'
 require 'boxxspring/resources/forbidden_error'
 require 'boxxspring/resources/attribute_error'
@@ -19,26 +20,37 @@ require 'boxxspring/resources/attribute_error'
 require 'boxxspring/resources/malformed_parameter_error'
 require 'boxxspring/resources/not_found_error'
 
+# Property, artifacts
 require 'boxxspring/resources/property'
-require 'boxxspring/resources/picture'
-require 'boxxspring/resources/user_agent'
+require 'boxxspring/resources/artifact'
+require 'boxxspring/resources/artifact_relationship'
+require 'boxxspring/resources/artifact_locator'
+require 'boxxspring/resources/feed'
+require 'boxxspring/resources/token'
 require 'boxxspring/resources/theme_environment'
 require 'boxxspring/resources/theme_template'
 require 'boxxspring/resources/theme'
-require 'boxxspring/resources/feed'
+require 'boxxspring/resources/user_agent'
+
+
+# Campaign, Filter & Advertising
 require 'boxxspring/resources/filter'
 require 'boxxspring/resources/filter_criteria'
+require 'boxxspring/resources/advertising_advertisement'
+require 'boxxspring/resources/advertising_campaign'
+require 'boxxspring/resources/advertising_freewheel_advertisement'
 require 'boxxspring/resources/advertising_doubleclick_advertisement'
 require 'boxxspring/resources/advertising_liverail_advertisement'
+
+
+# Binaries
+require 'boxxspring/resources/picture'
 require 'boxxspring/resources/video'
 require 'boxxspring/resources/video_source'
 require 'boxxspring/resources/video_source_segment'
 require 'boxxspring/resources/video_text'
 require 'boxxspring/resources/video_track'
-require 'boxxspring/resources/artifact_relationship'
-require 'boxxspring/resources/artifact'
-require 'boxxspring/resources/artifact_locator'
-require 'boxxspring/resources/token'
+require 'boxxspring/resources/stream'
 
 # Services & Distributions
 require 'boxxspring/resources/service'
@@ -92,8 +104,3 @@ require 'boxxspring/resources/clip_creation_task'
 require 'boxxspring/resources/sample'
 require 'boxxspring/resources/metric'
 require 'boxxspring/resources/analytics_media_sample'
-
-## Live
-require 'boxxspring/resources/stream'
-
-

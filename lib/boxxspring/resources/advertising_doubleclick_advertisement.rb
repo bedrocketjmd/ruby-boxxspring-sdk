@@ -1,8 +1,5 @@
 module Boxxspring
-  class AdvertisingDoubleClickAdvertisement < Base 
+  class AdvertisingDoubleClickAdvertisement < AdvertisingAdvertisement
     field  :tag_url
-
-    field  :name
-    field  :state
   end
 end
