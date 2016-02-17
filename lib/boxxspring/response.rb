@@ -13,20 +13,19 @@ module Boxxspring
       @code = http_response.code
       @resources = []
 
-      content = decode_response_body( http_response )
-      if ( content && content.respond_to?( :keys ) )
-        Boxxspring::Parser.new( content ) do | parser |
+      @body = decode_response_body( http_response )
+
+      if ( @body && @body.respond_to?( :keys ) )
+        Boxxspring::Parser.new( @body ) do | parser |
           @resources = parser.resources
           @success = !parser.type_name?( :error )
         end
       else
         @success = false
         @resources << Boxxspring::Error.new( 
-          message: "An unknown error occured (#{@code})."
+          message: "#{@code}: #{http_response.message}."
         )
       end
-      @body = content
-                      
     end
 
     def success?
@@ -38,17 +37,13 @@ module Boxxspring
     end
     
     protected; def decode_response_body( http_response )
-    
-      response = nil
-      
-      body = http_response.body;
-      unless body.nil? || body.empty?
-        response = 
-          JSON.parse( body ) rescue nil
+      body = http_response.body
+
+      if body.present?
+        JSON.parse( body ) rescue nil
+      else
+        nil
       end
-      
-      response
-      
     end
 
   end
