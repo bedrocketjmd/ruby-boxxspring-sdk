@@ -1,3 +1,3 @@
 module Boxxspring
-  VERSION = '2.4.12'
+  VERSION = '2.5.0'
 end
