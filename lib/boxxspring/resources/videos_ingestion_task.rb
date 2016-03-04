@@ -5,6 +5,7 @@ module Boxxspring
     field   :name
     field   :description
     field   :tags
+    field   :categories
     field   :originated_at
     field   :note
     field   :provider
