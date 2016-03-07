@@ -9,6 +9,7 @@ module Boxxspring
     field  :completed_at
     field  :state
     field  :message
+    field  :execute_at
 
     has_one :distribution
   end

@@ -14,6 +14,7 @@ module Boxxspring
     field   :message
     field   :started_at
     field   :ended_at
+    field   :execute_at
 
     has_one :property
 
