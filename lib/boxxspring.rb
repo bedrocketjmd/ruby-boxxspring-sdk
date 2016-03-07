@@ -70,8 +70,17 @@ require 'boxxspring/resources/twitter_distribution'
 require 'boxxspring/resources/youtube_distribution'
 require 'boxxspring/resources/dailymotion_distribution'
 require 'boxxspring/resources/boxxspring_distribution'
-require 'boxxspring/resources/distribution_activity'
 require 'boxxspring/resources/branding_rule'
+
+## DistributionOperations
+
+require 'boxxspring/resources/distribution_operation'
+require 'boxxspring/resources/dailymotion_distribution_operation'
+require 'boxxspring/resources/verizon_distribution_operation'
+require 'boxxspring/resources/boxxspring_distribution_operation'
+require 'boxxspring/resources/youtube_distribution_operation'
+require 'boxxspring/resources/facebook_page_distribution_operation'
+require 'boxxspring/resources/twitter_distribution_operation'
 
 ## Tasks
 require 'boxxspring/resources/task'

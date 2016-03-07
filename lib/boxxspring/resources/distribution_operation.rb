@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class DistributionActivity < Base
+  class DistributionOperation < Base
     field  :id
     field  :property_id
     field  :artifact_id
@@ -9,6 +9,7 @@ module Boxxspring
     field  :completed_at
     field  :state
     field  :message
+    field  :execute_at
 
     has_one :distribution
   end
