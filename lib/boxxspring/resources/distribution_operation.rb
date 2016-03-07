@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class DistributionActivity < Base
+  class DistributionOperation < Base
     field  :id
     field  :property_id
     field  :artifact_id
