@@ -17,6 +17,8 @@ module Boxxspring
     field   :auto_publish
     field   :video_article_artifact_id
     field   :artifact_id
+    field   :categories
+    field   :category_ids
 
   end
 
