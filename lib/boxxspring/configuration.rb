@@ -34,7 +34,8 @@ module Boxxspring
 
     # the api uri; DO NOT COMMIT A MODIFIED DEFAULT
     define_attribute :api_uri,      default: 'https://api.boxxspring.com'
-  
+    define_attribute :api_credentials
+
     def from_hash( configuration )
   
       configuration.each_pair do | name, value |
