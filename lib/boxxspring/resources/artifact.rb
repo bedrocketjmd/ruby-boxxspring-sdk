@@ -51,6 +51,9 @@ module Boxxspring
     has_many  :advertisements
     has_many  :artifact_locators
 
+    def uid
+      Base64.encode64( "#{self.property_id},#{self.id}" )
+    end
 
   end
 
