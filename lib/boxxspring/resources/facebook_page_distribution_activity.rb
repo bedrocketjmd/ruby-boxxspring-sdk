@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class FacebookPageDistributionOperation < DistributionOperation
+  class FacebookPageDistributionActivity < Activity
     field  :post_name
     field  :post_link
     field  :post_message
