@@ -45,6 +45,7 @@ require 'boxxspring/resources/advertising_liverail_advertisement'
 
 # Binaries
 require 'boxxspring/resources/picture'
+require 'boxxspring/resources/video_picture'
 require 'boxxspring/resources/video'
 require 'boxxspring/resources/video_source'
 require 'boxxspring/resources/video_source_segment'
