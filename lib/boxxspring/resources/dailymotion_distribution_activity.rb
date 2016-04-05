@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class DailymotionDistributionOperation < DistributionOperation
+  class DailymotionDistributionActivity < Activity
 
     field  :video_title
     field  :video_description

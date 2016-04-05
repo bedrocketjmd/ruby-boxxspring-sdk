@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class BoxxspringDistributionOperation < DistributionOperation
+  class BoxxspringDistributionActivity < Activity
 
     field  :name
     field  :description
