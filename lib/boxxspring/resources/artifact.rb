@@ -40,6 +40,8 @@ module Boxxspring
 
     field     :property_id
 
+    field     :uid
+
     has_one   :attribution
 
     has_many  :artifacts
