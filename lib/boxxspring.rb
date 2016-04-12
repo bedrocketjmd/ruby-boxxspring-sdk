@@ -81,6 +81,7 @@ require 'boxxspring/resources/boxxspring_distribution_activity'
 require 'boxxspring/resources/youtube_distribution_activity'
 require 'boxxspring/resources/facebook_page_distribution_activity'
 require 'boxxspring/resources/twitter_distribution_activity'
+require 'boxxspring/resources/boxxspring_update_activity'
 
 ## Tasks
 require 'boxxspring/resources/task'
