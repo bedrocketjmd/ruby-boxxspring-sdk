@@ -31,8 +31,9 @@ module Boxxspring
     field     :provider_uid
     field     :provider_url
 
-    field     :sponsor_id
+    field     :template
     field     :template_id
+    field     :sponsor_id
     field     :attribution_id
 
     field     :attribution_name
