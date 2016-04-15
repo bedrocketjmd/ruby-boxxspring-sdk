@@ -12,7 +12,7 @@ module Boxxspring
     field  :message
     field  :execute_at
 
-    has_one :distribution
+    has_one :artifact_locator
   end
 
 end
