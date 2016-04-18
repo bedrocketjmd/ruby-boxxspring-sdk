@@ -6,7 +6,7 @@ module Boxxspring
     field :distribution_id
     field :name
     field :description
-    field :artifact_ids
+    field :category_uids
 
   end
 
