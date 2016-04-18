@@ -4,7 +4,7 @@ module Boxxspring
     field  :artifact_state
     field  :name
     field  :description
-    field  :artifact_ids
+    field  :category_uids
   end
 
 end
