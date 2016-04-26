@@ -51,7 +51,7 @@ module Boxxspring
     field :type_name
     has_many  :errors
 
-  	def initialize( attributes = {}, associations = {} )
+    def initialize( attributes = {}, associations = {} )
       self.type_name = self.class.name.gsub( /Boxxspring::/, '' ).underscore
       attributes.each do | key, value |
         send( "#{key}=", value ) if respond_to?( "#{key}=" )
