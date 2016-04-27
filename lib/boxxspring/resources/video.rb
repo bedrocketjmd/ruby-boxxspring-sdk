@@ -33,7 +33,7 @@ module Boxxspring
     
     has_many  :video_sources
     has_many  :tracks
-
+    has_many  :pictures
     has_many  :texts
     
   end
