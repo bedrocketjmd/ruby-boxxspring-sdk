@@ -91,7 +91,7 @@ module Boxxspring
       result
     end
 
-    def write( node, objects, &block ) 
+    def write( node, objects, &block )
       result = nil
       Boxxspring::Request.new.tap do | request |
         serializer = Boxxspring::Serializer.new( objects )
@@ -119,7 +119,7 @@ module Boxxspring
 
     protected; def normalize_include( *arguments )
 
-      includes = {};
+      includes = {}
       arguments.each do | argument |
         case argument
         when Array
