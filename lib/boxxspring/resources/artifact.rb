@@ -16,6 +16,7 @@ module Boxxspring
     field     :property_id
 
     field     :name
+    field     :short_name
     field     :short_description
     field     :description
     field     :note
