@@ -15,8 +15,8 @@ module Boxxspring
     field     :uid
     field     :property_id
 
-    field     :name
     field     :short_name
+    field     :name
     field     :short_description
     field     :description
     field     :note
