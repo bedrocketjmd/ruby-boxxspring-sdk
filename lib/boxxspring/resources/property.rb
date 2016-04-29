@@ -3,6 +3,7 @@ module Boxxspring
   class Property < Base
 
     field   :id
+    field   :realm_uuid
 
     field   :created_at
     field   :updated_at
