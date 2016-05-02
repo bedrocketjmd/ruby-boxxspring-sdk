@@ -73,15 +73,16 @@ require 'boxxspring/resources/dailymotion_distribution'
 require 'boxxspring/resources/boxxspring_distribution'
 require 'boxxspring/resources/branding_rule'
 
-## DistributionOperations
+## Activities
 
-require 'boxxspring/resources/distribution_operation'
-require 'boxxspring/resources/dailymotion_distribution_operation'
-require 'boxxspring/resources/verizon_distribution_operation'
-require 'boxxspring/resources/boxxspring_distribution_operation'
-require 'boxxspring/resources/youtube_distribution_operation'
-require 'boxxspring/resources/facebook_page_distribution_operation'
-require 'boxxspring/resources/twitter_distribution_operation'
+require 'boxxspring/resources/activity'
+require 'boxxspring/resources/dailymotion_distribution_activity'
+require 'boxxspring/resources/verizon_distribution_activity'
+require 'boxxspring/resources/boxxspring_distribution_activity'
+require 'boxxspring/resources/youtube_distribution_activity'
+require 'boxxspring/resources/facebook_page_distribution_activity'
+require 'boxxspring/resources/twitter_distribution_activity'
+require 'boxxspring/resources/boxxspring_update_activity'
 
 ## Tasks
 require 'boxxspring/resources/task'
@@ -97,6 +98,7 @@ require 'boxxspring/resources/youtube_distribution_task'
 require 'boxxspring/resources/dailymotion_distribution_task'
 require 'boxxspring/resources/verizon_distribution_task'
 require 'boxxspring/resources/boxxspring_distribution_task'
+require 'boxxspring/resources/boxxspring_update_task'
 require 'boxxspring/resources/youtube_subscription_task'
 require 'boxxspring/resources/twitter_subscription_task'
 require 'boxxspring/resources/vimeo_subscription_task'
