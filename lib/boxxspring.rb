@@ -41,10 +41,11 @@ require 'boxxspring/resources/advertising_campaign'
 require 'boxxspring/resources/advertising_freewheel_advertisement'
 require 'boxxspring/resources/advertising_doubleclick_advertisement'
 require 'boxxspring/resources/advertising_liverail_advertisement'
-
+require 'boxxspring/resources/advertising_vast_advertisement'
 
 # Binaries
 require 'boxxspring/resources/picture'
+require 'boxxspring/resources/video_picture'
 require 'boxxspring/resources/video'
 require 'boxxspring/resources/video_source'
 require 'boxxspring/resources/video_source_segment'
