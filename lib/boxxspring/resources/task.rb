@@ -15,6 +15,7 @@ module Boxxspring
     field   :started_at
     field   :ended_at
     field   :execute_at
+    field   :expire_at
 
     has_one :property
 

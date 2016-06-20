@@ -15,7 +15,6 @@ module Boxxspring
     field :short_name
     field :attribution_id
     field :picture_id
-    field :expire_at
 
   end
 

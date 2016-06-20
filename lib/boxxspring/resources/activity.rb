@@ -11,6 +11,7 @@ module Boxxspring
     field  :state
     field  :message
     field  :execute_at
+    field  :expire_at
 
     has_one :artifact_locator
   end
