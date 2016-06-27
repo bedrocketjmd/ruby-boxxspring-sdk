@@ -117,3 +117,5 @@ require 'boxxspring/resources/stream_recording_ingestion_task'
 require 'boxxspring/resources/sample'
 require 'boxxspring/resources/metric'
 require 'boxxspring/resources/analytics_media_sample'
+
+require 'boxxspring/resources/cue_point'
