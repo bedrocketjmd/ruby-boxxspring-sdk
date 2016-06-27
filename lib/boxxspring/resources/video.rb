@@ -35,6 +35,7 @@ module Boxxspring
     has_many  :tracks
     has_many  :pictures
     has_many  :texts
+    has_many  :cue_points
     
   end
 
