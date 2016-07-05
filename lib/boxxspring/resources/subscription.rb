@@ -12,8 +12,6 @@ module Boxxspring
     field   :last_polled_at
     field   :time_to_live
 
-    field   :original
-
     field   :auto_publish
     field   :url
     field   :state
