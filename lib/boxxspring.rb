@@ -52,6 +52,7 @@ require 'boxxspring/resources/video_source_segment'
 require 'boxxspring/resources/video_text'
 require 'boxxspring/resources/video_track'
 require 'boxxspring/resources/stream'
+require 'boxxspring/resources/cue_point'
 
 # Services & Distributions
 require 'boxxspring/resources/service'
@@ -74,7 +75,6 @@ require 'boxxspring/resources/boxxspring_distribution'
 require 'boxxspring/resources/branding_rule'
 
 ## Activities
-
 require 'boxxspring/resources/activity'
 require 'boxxspring/resources/dailymotion_distribution_activity'
 require 'boxxspring/resources/verizon_distribution_activity'
@@ -102,7 +102,6 @@ require 'boxxspring/resources/boxxspring_update_task'
 require 'boxxspring/resources/youtube_subscription_task'
 require 'boxxspring/resources/twitter_subscription_task'
 require 'boxxspring/resources/vimeo_subscription_task'
-require 'boxxspring/resources/video_article_curation_task'
 require 'boxxspring/resources/youtube_subscription_metadata_task'
 require 'boxxspring/resources/twitter_subscription_metadata_task'
 require 'boxxspring/resources/vimeo_subscription_metadata_task'
@@ -112,8 +111,3 @@ require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/video_branding_task'
 require 'boxxspring/resources/clip_creation_task'
 require 'boxxspring/resources/stream_recording_ingestion_task'
-
-## Analytics
-require 'boxxspring/resources/sample'
-require 'boxxspring/resources/metric'
-require 'boxxspring/resources/analytics_media_sample'

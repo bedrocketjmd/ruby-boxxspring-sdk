@@ -11,7 +11,6 @@ module Boxxspring
     field     :originated_at
 
     field     :state
-    field     :original
     field     :uid
     field     :property_id
 
@@ -34,8 +33,6 @@ module Boxxspring
     field     :attribution_id
     field     :artifact_ids
     field     :picture_id
-    field     :sponsor_id
-    field     :template_id
     field     :sponsor_id
 
     has_one   :attribution

@@ -6,6 +6,7 @@ module Boxxspring
     field   :description
     field   :file_name
     field   :artifact_id
+    field   :video_file_url
 
   end
 
