@@ -4,6 +4,7 @@ module Boxxspring
 
     field   :distribution_id
     field   :tweet_status
+    field   :upload_video
 
   end
 
