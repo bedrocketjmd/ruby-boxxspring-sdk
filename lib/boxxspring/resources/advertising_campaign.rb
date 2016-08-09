@@ -1,6 +1,8 @@
 module Boxxspring
 
   class AdvertisingCampaign < Base
+    field  :id
+    field  :property_id
     field  :name
     field  :url_pattern
     field  :filter_id
