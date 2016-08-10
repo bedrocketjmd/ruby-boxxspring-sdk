@@ -3,6 +3,7 @@ module Boxxspring
   class Property < Base
 
     field   :id
+    field   :realm_uuid
 
     field   :created_at
     field   :updated_at
@@ -28,6 +29,7 @@ module Boxxspring
 
     has_many  :services
     has_many  :settings
+
     def settings_content_by_name( name, default_result = nil )
       setting = self.settings.detect { | setting | setting.name == name }
       result = setting.nil? ? default_result : setting.content 
