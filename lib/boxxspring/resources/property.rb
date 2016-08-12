@@ -29,6 +29,7 @@ module Boxxspring
 
     has_many  :services
     has_many  :settings
+
     def settings_content_by_name( name, default_result = nil )
       setting = self.settings.detect { | setting | setting.name == name }
       result = setting.nil? ? default_result : setting.content 
