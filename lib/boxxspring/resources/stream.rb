@@ -11,7 +11,7 @@ module Boxxspring
     field     :state
     field     :picture_id
     field     :uuid
-    field     :host_uuid
+    field     :region
 
   end
 
