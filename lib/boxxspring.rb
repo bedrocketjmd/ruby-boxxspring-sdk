@@ -55,6 +55,11 @@ require 'boxxspring/resources/video_track'
 require 'boxxspring/resources/stream'
 require 'boxxspring/resources/cue_point'
 
+# Video References
+require 'boxxspring/resources/video_source_reference'
+require 'boxxspring/resources/video_reference'
+
+
 # Services & Distributions
 require 'boxxspring/resources/service'
 require 'boxxspring/resources/setting'
@@ -112,3 +117,4 @@ require 'boxxspring/resources/videos_curation_task'
 require 'boxxspring/resources/video_branding_task'
 require 'boxxspring/resources/clip_creation_task'
 require 'boxxspring/resources/stream_recording_ingestion_task'
+require 'boxxspring/resources/video_reference_ingestion_task'
