@@ -13,7 +13,7 @@ module Boxxspring
     field     :uuid
     field     :host_url
     field     :in_host_url
-    field     :transcode_url
+    field     :transcoder_url
 
   end
 
