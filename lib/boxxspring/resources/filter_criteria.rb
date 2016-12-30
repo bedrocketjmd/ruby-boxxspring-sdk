@@ -7,6 +7,7 @@ module Boxxspring
 
     field  :id
     field  :filter_id
+    field  :property_id
     field  :condition
     field  :field
     field  :values
