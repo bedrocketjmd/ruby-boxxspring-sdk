@@ -8,6 +8,7 @@ module Boxxspring
     field  :id
     field  :uuid
     field  :operator
+    field  :property_id
 
     has_many :filter_criteria
 
