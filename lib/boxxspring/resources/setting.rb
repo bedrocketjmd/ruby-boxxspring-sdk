@@ -10,6 +10,7 @@ module Boxxspring
     field  :name
     field  :content
     field  :permission_id
+    field  :property_id
 
   end
 
