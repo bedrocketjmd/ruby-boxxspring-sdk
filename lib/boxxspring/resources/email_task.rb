@@ -4,7 +4,7 @@ module Boxxspring
 
     field  :email_type
     field  :email_address
-    field  :tag_name
+    field  :category_name
     field  :name
     field  :artifact_id
 
