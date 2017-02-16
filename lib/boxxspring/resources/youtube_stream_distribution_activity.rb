@@ -6,6 +6,8 @@ module Boxxspring
     field   :video_visibility
     field   :video_description
     field   :video_title
+    field   :stream_key
+    field   :stream_url
   end
 
 end
