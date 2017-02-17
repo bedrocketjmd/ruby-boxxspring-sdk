@@ -15,7 +15,6 @@ module Boxxspring
       
       # use ssl when https is the uri scheme                       
       @http.use_ssl = ( uri.scheme == 'https' )
-      @http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
       # retain the default parameters 
       @default_parameters = default_parameters.stringify_keys
