@@ -10,6 +10,7 @@ module Boxxspring
     field  :artifact_id
     field  :artifact_position
     field  :name
+    field  :property_id
 
     has_one :artifact
     has_one :related_artifact
