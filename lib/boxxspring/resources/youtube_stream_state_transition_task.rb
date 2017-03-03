@@ -4,6 +4,7 @@ module Boxxspring
     field   :distribution_id
     field   :parent_task_id
     field   :broadcast_id
+    field   :stream_key
   end
 
 end
