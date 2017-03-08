@@ -9,6 +9,7 @@ module Boxxspring
     field   :stream_key
     field   :stream_url
     field   :youtube_stream_id
+    field   :youtube_broadcast_id
   end
 
 end
