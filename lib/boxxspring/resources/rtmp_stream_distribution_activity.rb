@@ -3,8 +3,8 @@ module Boxxspring
   class RtmpStreamDistributionActivity < Activity
     field   :stream_key
     field   :stream_url
-    field   :username
-    field   :password
+    field   :authentication_username
+    field   :authentication_password
   end
 
 end

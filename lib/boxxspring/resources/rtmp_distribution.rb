@@ -3,8 +3,8 @@ module Boxxspring
 
     field :stream_url
     field :stream_key
-    field :username
-    field :password
+    field :authentication_username
+    field :authentication_password
 
   end
 end
