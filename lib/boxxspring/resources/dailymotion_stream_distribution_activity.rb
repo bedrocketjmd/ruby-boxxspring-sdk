@@ -7,8 +7,6 @@ module Boxxspring
     field  :video_public
     field  :video_category_id
     field  :video_tags
-    field  :start_time
-    field  :end_time
 
   end
 
