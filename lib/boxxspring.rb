@@ -41,6 +41,7 @@ require 'boxxspring/resources/advertising_campaign'
 require 'boxxspring/resources/advertising_freewheel_advertisement'
 require 'boxxspring/resources/advertising_btn_freewheel_advertisement'
 require 'boxxspring/resources/advertising_doubleclick_advertisement'
+require 'boxxspring/resources/advertising_cbs_advertisement'
 require 'boxxspring/resources/advertising_liverail_advertisement'
 require 'boxxspring/resources/advertising_vast_advertisement'
 
