@@ -1,7 +1,7 @@
 module Boxxspring
 
   class FacebookDistributionDeletionActivity < Activity
-    field :distribution_activity_id
+    field :distribution_artifact_locator_id
   end
 
 end
