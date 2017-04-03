@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class FacebookDistributionDeletionTask < Task
+  class YoutubeDistributionDeletionTask < Task
     field   :distribution_id
     field   :distribution_artifact_locator_id
   end

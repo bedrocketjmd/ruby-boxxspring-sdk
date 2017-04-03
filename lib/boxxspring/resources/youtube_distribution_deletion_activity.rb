@@ -1,6 +1,6 @@
 module Boxxspring
 
-  class FacebookDistributionDeletionActivity < Activity
+  class YoutubeDistributionDeletionActivity < Activity
     field :distribution_artifact_locator_id
   end
 
