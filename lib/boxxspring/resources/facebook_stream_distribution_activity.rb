@@ -6,6 +6,7 @@ module Boxxspring
     field   :post_stream_description
     field   :stream_key
     field   :stream_url
+    field   :continuous
   end
 
 end
