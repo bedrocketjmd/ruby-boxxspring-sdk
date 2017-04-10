@@ -1,6 +1,7 @@
 module Boxxspring
 
   class YoutubeDistributionActivity < Activity
+    field  :youtube_id
     field  :video_title
     field  :video_description
     field  :video_visibility
