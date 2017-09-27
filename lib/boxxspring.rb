@@ -44,6 +44,7 @@ require 'boxxspring/resources/advertising_doubleclick_advertisement'
 require 'boxxspring/resources/advertising_cbs_advertisement'
 require 'boxxspring/resources/advertising_liverail_advertisement'
 require 'boxxspring/resources/advertising_vast_advertisement'
+require 'boxxspring/resources/advertising_custom_advertisement'
 
 # Binaries
 require 'boxxspring/resources/picture'
